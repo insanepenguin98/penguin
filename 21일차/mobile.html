@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일웹</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        header{
+            width: 100%;
+            height: 45px;
+            background-image: url(./img/header_background.png);/* 배경 이미지 불러오기 */
+            background-repeat: repeat-x;/* 배경이미지 가로 반복 */
+            position: relative;
+            overflow: hidden;
+        }
+        .logo{
+            width: 100px;
+            height: 32px;
+            line-height: 32px;
+            margin: 5px auto;
+            text-align: center;
+            overflow: hidden;
+            color: #fff;
+            font-size: 28px;
+        }
+        /* 왼쪽 버튼 */
+        .left{
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            display: block;
+            width: 62px;
+            height: 32px;
+            background-color: bisque;
+            font-size: 0;
+            /* 이미지를 볼 수 없는 환경에서도 내용을 이해할 수 있게 웹 접근성을 보장하기 위해 사용 */
+            background-image: url(./img/css_sprites.png);
+        }
+        .right{
+            position: absolute;
+            right: 10px;
+            top: 7px;
+            display: block;
+            width: 32px;
+            height: 32px;
+            font-size: 0;
+            background-color: aliceblue;
+            background-image: url(./img/css_sprites.png);
+            background-position: -62px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        모바일 웹의 원리
+        =====================
+        모바일 웹은 사용자의 디지털 기기 접속 여부에 따라 html문서에 삽입된 스크립트 코드를 통해
+        htp내부의 pc폴더로 이동할것인지 모바일 폴더로 이동할 것인지 결정함.
+
+        뷰포트(viewport) meta태그 지정
+        ===============================
+        pc에서 작업했던 내용을 그대로 모바일에서 확인해보면 글자를 비롯한 콘텐츠 내용이 매우 작게 표시됨.
+        이것은 픽셀 표현 방법이 pc와 모바일이 서로 다르기 때문임. 애때 뷰포트를 설정하면
+        화면을 확대하거나 축소해도 접속한 기기에 맞게 표시할 수 있음. 
+        뷰포트는 반드시 head태그 사이에 선언되어있어야 하며 웹편집 프로그램 기본구조 안에 보통 포함되어있음.
+
+        [뷰포트 기본형]
+        <meta name="viewport" content="속성1 속성2 속성3">
+        - content의 속성들 
+          1. width : 뷰포트의 넓이, 값으로는 device-width또는 크기를 사용함(기본값).
+          2. height : 뷰포트의 높이, 값으로는 device-height또는 크기를 사용함(기본값).
+          3. initial-scale : 추가 확대/축소값. 0~10까지 쓸 수 있고 기본값은 1임.
+          4. minimum-scale : 최소 확대/축소값. 0~10까지 쓸 수 있고 기본값은 0.25
+          5. maximum-scale : 최대 확대/축소값. 0~10까지 쓸 수 있고 기본값은 1.6
+
+        스프라이트 이미지
+        =============================
+        모바일 환경에서 매우 중요하게 사용되는 이미지, pc로 인터넷을 접속할때와 모바일로 인터넷을 접속할때
+        속도면에서 봐도 pc가 훨씬 빠르고 모바일은 인터넷 환경에 따라 데이터 소모량이 매우 높음.
+        모바일로 웹 사이트에 접속할 경우 이미지 용량은 pc랑 동일하게 사용되며
+        이미지 용량만큼의 데이터가 소모되며, 웹페이지의 로딩 속도도 pc에 비해 많이 느리다는것을 의마함.
+        그래서 모바일용 웹 환경에서는 스프라이트 이미지 사용을 권장하고 있음.
+        스프라이트 이미지는 여러 개의 이미지를 하나로 뭉쳐놓은 것을 뜻함.
+     -->
+     <header>
+         <a href="#" class="left">left</a>
+         <h1 class="logo">LOGO</h1>
+         <a href="#" class="right">right</a>
+     </header>
+</body>
+</html>

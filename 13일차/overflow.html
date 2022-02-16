@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow속성</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .con1{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            float: left;
+            margin-left: 10px;
+            box-sizing: border-box;
+        }
+        /* con1은 박스안에서 내용이 벗어나지 않기 때문에 overflow를 쓸 필요가 없음. */
+        .con2{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            float: left;
+            margin-left: 30px;
+            box-sizing: border-box;
+            overflow: visible;
+            /* visible은 기본값이며, overflow속성을 지정하지 않은 것과 같음 */
+
+        }
+        .con3{
+            width: 200px;
+            border: 2px solid black;
+            float: left;
+            margin-left: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            /* 높이값이 없으면 자식 컨텐츠만큼 알아서 늘어남 */
+        }
+        .con4{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            float: left;
+            margin-left: 10px;
+            box-sizing: border-box;
+            /* 높이값이 있으면 높이값만큼만 내용을 보여줌 */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        overflow속성
+        ====================
+        overflow속성은 내부의 요소가 부모박스를 벗어났을때 어떻게 처리할 것인가를
+        정하는 속성.
+        [속성값]
+        1. hidden** 
+          - 박스에 높이값이 지정되어 있는경우 : 영역을 벗어나는 부분은 보이지 않게 숨겨줌.
+          - 박스에 높이값이 지정되어 있지 않은 경우 : 자식요소에 맞춰 부모박스를 알아서 늘려줌.
+        2. scroll : 영역을 벗어나는 부분은 스크롤바를 나타나게 만듦
+        3. visible : 영역을 벗어나는 부분을 보여줌. (기본값)
+        4. auto : 박스를 넘어가지 않으면 스크롤바가 나오지 않고, 
+                  박스가 넘어갈때 스크롤바가 나옴.
+        5. initial : 기본값으로 설정함.
+        6. inherit : 부모요소의 속성을 상속받음.
+     -->
+     <!-- 박스에 높이에 맞춰 내용을 넣은 경우 -->
+     <div class="con1">
+         <h4>콘텐츠 양이 일정할 경우</h4>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+     </div>
+
+     <!-- 박스의 높이보다 내용이 더 길어서 흘러넘치는 경우 -->
+     <div class="con2">
+        <h4>콘텐츠 양이 더 많거나 유동적인 경우</h4>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi unde, quo quibusdam officiis voluptas nisi itaque sunt ipsa repellat perspiciatis, voluptatum iure expedita repudiandae quod delectus beatae deleniti ducimus exercitationem!</p>
+    </div>
+
+    <!-- 박스의 높이를 설정하지 않고 overflow:hidden을 지정하는 경우 -->
+    <div class="con3">
+        <h4>콘텐츠 양에 따라 높이가 늘어남</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <!-- 박스의 높이를 지정하고 overflow:hidden을 지정하는 경우 -->
+    <div class="con4">
+        <h4>박스의 지정된 높이만큼만 보임</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+</body>
+</html>

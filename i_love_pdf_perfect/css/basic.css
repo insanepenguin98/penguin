@@ -1,0 +1,318 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    cursor: pointer;
+    color: #333;
+    text-decoration: none;
+}
+img{
+    border: none;
+    display: block;
+}
+ul, li{
+    list-style: none;
+    cursor: pointer;
+}
+body{
+    font-family: 'Noto Sans KR','Roboto' sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #333;
+}
+/* 전체구조 */
+#wrap{
+    width: 100%;
+    height: auto;
+}
+header{
+    width: 100%;
+    height: 60px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.3);
+}
+/* 로고랑 메뉴 */
+header > .h_left{
+    width: 40%;
+    height: 60px;
+    float: left;
+}
+.h_left h1{
+    width: 130px;
+    height: 60px;
+    margin-left: 20px;
+    float: left;
+}
+h1 img{
+    max-width: 100%;
+    padding: 14px 0;
+}
+/* 메뉴 */
+nav{
+    float: left;
+    width: 600px;
+    height: 60px;
+}
+nav > ul{
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 60px;
+}
+nav > ul > li:hover a{
+    color: #e5322d;
+}
+/* 오른쪽 아이콘 모음 */
+header > .h_right{
+    width: 18%;
+    height: 60px;
+    float: right;
+    display: flex;
+}
+.h_right div{
+    width: 25%;
+}
+.h_right > div img{
+    max-width: 50%;
+    margin: 10px auto;
+}
+.h_right > .login,.join{
+    background-color: #f3f0ec;
+    text-align: center;
+    line-height: 60px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+.h_right > .join{
+    background-color: #e5322d;
+}
+.join > a{
+    color: #fff;
+}
+/* 마우스 오버 */
+.h_right > .login:hover{
+    background-color: #383e45;
+}
+.h_right > .login:hover a{
+    color: #fff;
+}
+.h_right > .join:hover{
+    background-color: #383e45;
+}
+/* 컨텐츠 영역 */
+main{
+    width: 100%;
+    height: auto;
+}
+/* sec1 */
+.gradient{
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    text-align: center;
+    color: #fff;
+}
+.gradient > div{
+    width: 1200px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+.gradient h2{
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.gradient p{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+}
+/* sec2 */
+.q_menu{
+    width: 100%;
+    overflow: hidden;
+    background-color: #f3f0ec;
+    padding: 50px 0;
+    
+}
+.big_box{
+    width: 1800px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-flow: row wrap;
+}
+.big_box div{
+    width: 300px;
+    height: 250px;
+    border-left: 1px solid #f3f0ec ;
+    border-bottom: 1px solid #f3f0ec;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.big_box > div.border_n{
+    /*.big_box의 자손 div중 class이름이 .border_n인 요소를 선택*/
+    border-left: 0 ;
+}
+.big_box > div > h3{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 100px;
+}
+.big_box > div > p{
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+    color: #999;
+}
+/* sec3 */
+.solution{
+    width: 100%;
+    height: auto;
+}
+.big_box2{
+    width: 1200px;
+    height: 561px;
+    margin: 100px auto;
+}
+.l_box{
+    width: 50%;
+    height: 561px;
+    float: left;
+}
+.l_box img{
+    width: 423px;
+    height: 364px;
+    margin: 99px auto;
+}
+.r_box{
+    width: 50%;
+    height: 561px;
+    float: right;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.r_box h2{
+    font-size: 35px;
+    line-height: 45px;
+}
+.r_box > div{
+    width: 100%;
+    overflow: hidden;
+    background-color: #efefef;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.r_box > div > h3{
+    font-size: 18px;
+    font-weight: 500;
+}
+.r_box > div > p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    margin-top: 10px;
+}
+.r_box > div a{
+    text-decoration: underline;
+    color: #e5322d;
+    font-weight: 600;
+}
+.r_box > div > h3 > a{
+    color: #333;
+}
+.r_box > div ~ div{
+    background-color: #fff;
+}
+.r_box > div:hover{
+    background-color: #efefef;
+}
+/* sec4 */
+.grey_box{
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    background-color: #f3f4f8;
+    text-align: center;
+    padding: 127px 0;
+}
+.grey_box h2{
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.grey_box p{
+    font-size: 22px;
+    font-weight: 300;
+}
+/* sec5 */
+.last_box{
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    background-color: #2a2b2e;
+}
+.big_box3{
+    width: 1200px;
+    height:400px;
+    margin: 0 auto;
+    color: #fff;
+}
+.big_box3 > .text {
+    width: 60%;
+    height: 400px;
+    float: left;
+    box-sizing: border-box;
+    padding: 144px 0;
+}
+.text h2{
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.text p{
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 35px;
+}
+.big_box3 > button{
+    width: 200px;
+    height: 55px;
+    float: right;
+    background-color: gold;
+    color: #2a2b2e;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 173px 0;
+} 
+.big_box3 > button:hover{
+    background-color: #fff;
+    cursor: pointer;
+}
+/* 푸터 */
+footer {
+    width: 100%;
+    height: 100px;
+    font-size: 14px;
+    line-height: 100px;
+    color: #888;
+}
+footer p{
+    width: 1200px;
+    height: 100px;
+    text-align: center;
+    color: #888;
+    margin: 0 auto;
+}

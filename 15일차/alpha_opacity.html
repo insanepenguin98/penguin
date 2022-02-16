@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투명도</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            border: 4px solid black;
+            float: left;
+            text-align: center;
+            line-height: 300px;
+            font-size: 25px;
+        }
+        .box1{
+            background-color: #f5c507;
+            opacity: 0.5;
+        }
+        .box2{
+            background-color: rgba(245, 197, 7, 0.5);
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        웹 색상에서 투명도 적용하기
+        =================================
+        웹에서 투명도를 적용하는 방식은 2가지로 나누어짐.
+        opacity라는 속성과 rgba속성값을 사용할 수 있음.
+        투명도는 0이 최솟값이고 1이 최댓값임.
+        0.7 = 70%
+        opacity는 적용한 태그 전체에 적용됨. 그래서
+        내용과 테두리까지 모두 투명도가 적용됨.
+
+        alpha값은 적용한 태그의 배경에만 적용됨.
+        그래서 내용과 테두리에는 투명도가 적용되지 않음.
+
+     -->
+    <div class="box1">opacity</div>
+    <div class="box2">alpha</div>
+</body>
+</html>

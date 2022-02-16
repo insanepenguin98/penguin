@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>넓이 높이 속성</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 300px;
+            height: 100px;
+            background-color: lightblue;
+        }
+        .box2{
+            width: 50%;
+            height: 100px;
+            background-color: lemonchiffon;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        넓이 높이 속성
+        ====================
+        박스모델에서 컨텐츠 영역의 크기를 지정할때 넓이(width),높이(height)를 지정함.
+        홈페이지의 구조는 가로영역은 최대 1920px로 한정되어있고 높이는 출력하는 만큼
+        무한정 늘어날 수 있어 가로 영역의 지정이 매우 중요함.
+        그래서 박스의 너비와 높이를 제대로 지정해주는것이 중요한데 만약 너비높이가
+        제대로 지정되지 않으면 전체적인 레이아웃이 무너짐.
+
+        width, height 속성값
+        ==========================
+        1. px : 고정값. 고정단위
+        2. 백분율 : % => 박스 형태의 크기를 부모박스 기준으로 %로 지정함. 가변단위
+        3. auto : 자동 => 박스 너비와 높이값을 컨텐츠의 양에 따라 자동으로 결정됨, 기본값.
+     -->
+     <div class="box1">box-1 : px</div>
+     <div class="box2">box-2 : %</div>
+</body>
+</html>

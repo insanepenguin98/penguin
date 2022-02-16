@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시작문자 선택자</title>
+    <style>
+        p::first-letter{
+            font-size: 25px;
+            color: blueviolet;
+            font-weight: 900;
+        }
+        p::first-line{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <!-- 잘쓰이지 않음
+        
+        시작문자 선택자
+        ======================
+        태그 내부의 첫 번째 글자와 첫 번째 줄을 선택할 때 사용하는 선택자.
+        [기본형]
+        1.::first-letter : 첫 번째 글자를 선택함.
+        2.::first-line : 첫 번째 줄을 선택함.
+
+    -->
+    <h1>LOREM</h1>
+    <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Dolorum amet voluptates temporibus a quam laudantium vitae mollitia omnis, dolore veniam, 
+        consequuntur modi unde nesciunt porro iusto, delectus alias culpa iure.
+    </P>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius속성</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            /* 모든 div들의 공통속성 */
+            width: 300px;
+            height: 100px;
+            margin: 10px;
+        }
+        .box1{
+            background-color: darksalmon;
+            border-radius: 15px; /* 모서리 전체에 15px 둥글게 설정 */
+        }
+        .box2{
+            background-color: darkseagreen;
+            border-radius: 5px 10px 20px 3px;
+            /* 왼쪽상단부터 시계방향으로 적용 */
+        }
+        .box3{
+            background-color: darkturquoise;
+            border-radius: 10px 50px;
+            /* 앞자리는 왼쪽상단-오른쪽하단, 뒷자리는 오른쪽상단-왼쪽하단에 적용 */
+        }
+        .box4{
+            background-color: darkviolet;
+            border-top-left-radius: 10px;/* 왼쪽상단 */
+            border-top-right-radius: 30px;/* 오른쪽상단 */
+            border-bottom-left-radius: 5px;/* 왼쪽하단 */
+            border-bottom-right-radius: 40px;/* 오른쪽하단 */
+        }
+        .box5{
+            /* 박스의 너비높이가 같으면 정원으로 만들 수 있음.*/
+            background-color: darkorange;
+            border-radius: 50%;
+            /* 글자 가운데로 보내기 */
+            text-align: center;/* 글자정렬 : 가로 가운데 */
+            height: 300px;
+            line-height: 300px; /* 줄간격 */
+            /* 내용이 1줄일경우 높이값과 줄간격이 같으면 글자가 세로 가운데로 감. */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        border-radius속성
+        =====================
+        네모박스를 라운드형태로 만들때 사용하는 속성.
+        박스의 라운드를 각각 적용하거나 한꺼번에 같은 둥글기를 적용할 수 있음.
+
+        border-radius속성값을 각각 적용할때 값을 4개를 입력할 수 있는데
+        각 순서대로 왼쪽상단-오른쪽상단-오른쪽하단-왼쪽하단 순으로 적용됨.
+
+        [속성값]
+        크기는 px, em같은 단위와 함께 수치로 표현하며, 백분율은 현재 요소의 크기를 기준으로
+        둥글게 처리할 반지름 크기를 %로 지정함.
+     -->
+     <div class="box1">border-radius 박스 둥글게</div>
+     <div class="box2">border-radius 각각 모서리 둥글게</div>
+     <div class="box3">border-radius 값을 2개로 나눠 적용</div>
+     <div class="box4">border-radius 각각 4줄로 나눠서 적용</div>
+     <div class="box5">border-radius %단위 적용</div>
+</body>
+</html>

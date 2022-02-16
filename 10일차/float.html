@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배치속성</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .picture{
+      float: right; /* 해당 태그를 왼쪽으로 배치함. */
+    }
+    h2{
+      float: left;
+    }
+    p{
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    float속성
+    ====================
+    사전적인 의미로는 '떠다니다', '떠오르다'라는 의미가 있음.
+    박스를 왼쪽이나 오른쪽으로 배치할때 사용하는 속성.
+    float속성을 적용하게 되면 해당 속성이 적용된 태그는 위로 떠오르게되고
+    속성이 적용되지 않은 아래 태그들은 이 자리를 메꾸기 위해 치고 올라오는
+    현상이 나타나게 됨. 이 현상은 clear 속성으로 끝낼 수 있음.
+
+    [속성값]
+    1. left
+    2. right
+    3. none
+   -->
+   <img src="./img/sky.jpg" alt="sky" class="picture">
+   <h2>title-1</h2>
+   <p>
+     Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+   </p>
+</body>
+</html>

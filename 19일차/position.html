@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위치속성</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            width: 500px;
+            overflow: hidden;
+            float: left;
+            margin-left: 30px;
+            background-color: lightblue;
+        }
+        .static > div{
+            width: 300px;
+            height: 300px;
+            border: 4px solid bisque;
+            box-sizing: border-box;
+            font-size: 30px;
+            line-height: 300px;
+            text-align: center;
+            /* 기본값 */
+            position: static;
+            /* 좌표값인 left, top을 인식 못함 */
+            left: 100px;
+            top: 100px;
+        }
+        .relative > div{
+            width: 300px;
+            height: 300px;
+            border: 4px solid beige;
+            margin-left: 30px;
+            box-sizing: border-box;
+            font-size: 30px;
+            line-height: 300px;
+            text-align: center;
+            /* 상대위치 */
+            position: relative;
+            /* 좌표값 인식 가능 */
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        position : 위치속성
+        =============================
+         컴퓨터는 좌표체계로 박스나 요소를 움직일 수 있음.
+         이때 x축은 브라우저의 오른쪽으로 이동할수록 x축 양수이며
+         y축은 브라우저의 아래쪽으로 이동할수록 y축 양수임.
+         x축과 y축이 교차하는 시작 지점을 우리는 0점이라고 부르고 브라우저의 가장 왼쪽 상단이 0점임.
+
+         상대위치(relative)좌표 / 절대위치(absolute)좌표
+         ===========================================
+         절대위치좌표는 절대로 변하지 않는 좌표를 뜻함. 위에 써있는 0점과 x,y축으로 움직이는 것을 절대좌표라고함.
+         상대위치좌표는 박스가 출력되어있는 해당 박스의 왼쪽 상단이 0점(기준점)임.
+         보통 상대위치는 부모박스, 절대위치는 자식박스에 사용함.
+
+         position의 속성값
+         ======================
+         1. static : 태그가 위에서 아래로 순서대로 배치되며 position속성값을 쓰지 않은것과 같은 기본값.
+                     좌표값을 인식할 수 없고 상대위치에 속함.
+         2. relative : 박스가 출력된 초기 위치에서 상하 좌우로 위치를 이동함. 좌표값을 인식가능.
+         3. absolute : 절대 위치 좌표를 설정하며 부모박스가 없으면 브라우저 왼쪽 상단으로 이동하고 
+                       부모박스가 있으면 부모박스의 0점으로 이동함.
+         4. fixed : 스크롤과 상관없이 화면을 기준으로 절대 위치 좌표를 설정하며 위치가 고정되어 있음.
+                    절대좌표에 속함. 
+        
+         position의 하위 속성값
+         ==========================
+         position속성을 적용하면 좌표값을 뜻하는 하위속성 left, rignt와 top, bottom을 사용할 수 있음.
+         상대좌표에는 left와 top값을 절대좌표에는 left, right, top, bottom 값을 모두 사용할 수 있음.
+
+         left : 왼쪽에서 오른쪽으로 이동하는 값
+         right : 오른쪽에서 왼쪽으로 이동하는 값
+         top : 위에서 아래로 이동하는 값
+         bottom : 밑에서 위로 이동하는 값
+     -->
+     <!-- static -->
+     <section class="static">
+         <div>static-1</div>
+         <div>static-2</div>
+         <div>static-3</div>
+     </section>
+     <section class="relative">
+        <div>relative-1</div>
+        <div>relative-2</div>
+        <div>relative-3</div>
+    </section>
+</body>
+</html>

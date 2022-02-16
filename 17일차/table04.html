@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표의 구조</title>
+    <style>
+        th,td{
+            border: 2px solid gold;
+        }
+        .col_w2{
+            background-color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        표의 구조
+        =================
+        표도 웹사이트의 구조처럼 나눠 표현함. 
+        표의 제목 부분을 thead, 본문부분을 tbody, 표의 요약부분을 tfoot으로 나눠 구조를 짤 수 있음.
+        웹사이트 안에 표를 표현할때 이 구조를 나눠주는것이 웹표준이며
+        시각장애인들이 화면낭독기를 통해 표를 쉽게 파악하게 하기 위해 반드시 지켜주어야 함.
+        또한 css를 적용할때도 이렇게 구조가 나누어져 있으면 훨씬 스타일을 적용하기가 편함.
+
+        colgroup col태그
+        =========================
+        한 열에 있는 모든 셀에 같은 스타일을 적용하고자 할때 사용하는 태그.
+        col태그는 뒤에 닫는 태그가 없기 때문에 둘 이상의 열을 묶어 같은 스타일을 지정하려면
+        span속성을 이용해 <col span="2">이런식으로 묶어줄 열의 개수를 지정함.
+        colgroup 태그를 사용해 여러 열을 묶어 스타일을 적용하려면 태그 안에 <col>태그를
+        열의 개수만큼 출력하여 사용함.(=td, th개수와 col의 개수가 반드시 일치 해야함.)
+
+
+        
+     -->
+     <table>
+         <caption>공지사항</caption>
+         <colgroup>
+            <col span="2" class="col_w2">
+            <col>
+            <col>
+        </colgroup>
+         <!-- 표의 제목부분 -->
+         <thead>
+             <tr>
+                 <th>번호</th>
+                 <th>제목</th>
+                 <th>닐찌</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr>
+                 <td>001</td>
+                 <td>코리아 교육 그룹</td>
+                 <td>2022-01-28</td>
+             </tr>
+             <tr>
+                <td>002</td>
+                <td>브랜뉴디자인아카데미</td>
+                <td>2021-12-25</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>웹학과</td>
+                <td>2021-11-11</td>
+            </tr>
+         </tbody>
+         <tfoot>
+             <!-- 요약부분은 생략 가능 -->
+             <tr>
+                 <td>250</td>
+                 <td>총 250개의 게시물</td>
+                 <td>2020-01</td>
+             </tr>
+         </tfoot>
+     </table>
+</body>
+</html>

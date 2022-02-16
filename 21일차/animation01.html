@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 속성</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            border-radius: 100px;
+            text-align: center;
+            line-height: 200px;
+            color: #fff;
+            animation-name: rint;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #wrap:hover{
+            animation-play-state: paused;
+        }
+        @keyframes rint{
+            from{/*0초 지점*/
+                left: 0;
+                transform: rotate(0deg);
+            }
+            50%{/*1초 지점*/
+                left: 0;
+                transform: rotate(75deg);
+            }
+            to{/*2초 지점*/
+                left: 700px;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        애니메이션 속성
+        =====================
+        css3 모듈 중 하나로 태그에 움직임을 구현할때 사용하는 속성.
+        애니메이션의 움직이는 각각의 형태는 키프레임으로 구현되어 있음
+
+        @keyframes 속성 : 애니메이션이 변경되는 지점
+        =========================================
+        애니메이션의 시작 지점을 설정할때 해당 지점을 '키프레임'이라고 함.
+        그리고 이 키프레임은 애니메이션이 변경되는 모든 지점을 설정할 수 있음.
+        키프레임을 설정은 키프레임 안에서 시간에 의해 변화되는 부분은 선택자로 
+        입력함. 이때 선택자를 0%로 표기하면 시작위치를 뜻하고 100%라고 표기하면
+        끝나는 위치를 뜻함. 중간에 시간의 흐름을 한 번 더 제어하고 싶을때에는
+        50%로 표기함. 시작선택자는 0% 말고도 from으로도 표기가 가능하며
+        끝나는 선택자는 100% 말고도 to라고 표기할 수 있음
+
+        [속성값]
+        1. animation : 모든 애니메이션 속성을 한꺼번에 선언함.
+        2. animation-delay : 이벤트 발생 후 몇 초 후에 재생할지 지정.(s)
+        3. animation-duration : 애니메이션을 몇 초 동안 재생할지 지정함.(s)
+        4. animation-direction : 애니메이션의 진행 방향을 설정함.
+        5. animation-name : 애니메이션의 이름을 지정함.*****
+        6. animation-iteratiion-count : 애니메이션의 반복 횟수 
+        7. animation-play-state : 애니메이션의 재생 상태를 지정함.
+        8. animation-timing-fuction : 수치변형함수(속도값)을 지정함.
+
+        animation-name
+        ================================
+        @keyframes 애니메이션의 이름을 지정하며 여러 개의 매니메이션을 웹
+        페이지에 적용할 수 있음. 
+
+        [기본형]
+        움직임 요소 선택자{ animation-name : rint }
+
+        @keyframes 애니메이션 이름rint {
+            시작 시간의 선택자(0% 또는 from){ 스타일 속성과 값 }
+            끝나는 시간의 선택자(100% 또는 to){ 스타일 속성과 값 }
+        }
+
+        animation-direction
+        ===========================
+        [속성값]
+        1. atternate : from에서 to로 이동 후 to에서 from으로 이동을 반복함.
+        2. normal : 계속 from에서 to로 이동함.
+        3. reverse : 역방향으로 움직임.
+        4. atternate-reverse : 역방향으로 움직인 후 정방향으로 움직임
+
+        animation-interation-count : 반복 횟수
+        =======================================
+        [속성값]
+        1. 기본값은 숫자로 입력할 수 있음.
+        2. infinite : 무한반복
+
+        animation-play-state : 재생 상태
+        ===========================================
+        보통 반응선택자와 함께 쓰임
+        [속성값]
+        1. paused : 애니메이션을 중지함.
+        2. running : 기본값이며 계속 애니메이션을 재생함.
+
+        animation-timing-function : 이징효과
+        =======================================
+        특정 부분의 변화되는 속도값을 지정하여 나타내는것을 '이징효과'라고함
+        [속성값]
+        1. linear, ease, ease-in, ease-out, ease-in-out
+     -->
+
+     <div id="wrap">
+         <h1>animation</h1>
+     </div>
+</body>
+</html>

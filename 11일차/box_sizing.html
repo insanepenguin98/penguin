@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중첩박스</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner{
+      width: 740px;
+      height: 120px;
+      float:left;
+      background-color: black;
+      border: 2px solid red;
+      box-sizing: border-box;
+    }
+    .login{
+      width: 333px;
+      height: 120px;
+      float: left;
+      background-color: black;
+      margin-left: 27px;
+      border: 2px solid red;
+      box-sizing: border-box;
+    }
+    .main{
+      width: 1100px;
+      height: 120px;
+      background-color: red;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    box-sizing 속성
+    =========================
+    박스의 안쪽여백과 테두리까지를 컨텐츠영역(width,height)안에 포함시키는 속성.
+    [속성값]
+    1. contents-box; : 기본값, 안쪽여백과 테두리를 컨텐츠영역 바깥으로 표현.
+    2. border-box;*** : 컨텐츠 영역에 안쪽여백과 테두리를 포함시킴 
+   -->
+   <div class="main"> 
+   <div class="banner">배너 영역</div>
+   <div class="login">로그인</div>
+  </div>
+</body>
+</html>

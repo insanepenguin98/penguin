@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상태선택자</title>
+    <style>
+        input:enabled{
+            background-color: rebeccapurple;
+        }
+        input:disabled{
+            background-color: seagreen;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        상태선택자
+        =====================
+        입력양식태그의 상태를 선택할때 사용하는 선택자.
+        [기본형]
+        1. :checked - 체크상태의 input태그를 선택
+        2. :focus - 포커스(초점)상태의 input태그를 선택
+        3. :enabled - 사용가능한 상태의 input태그를 선택
+        4. :disabled - 사용불가능한 상태의 input태그를 선택
+     -->
+
+     <!-- 입력 가능한 상태 -->
+     <h2>enabled</h2>
+     <p>
+         입력가능한 상태
+         <input type="text">
+         <input type="checkbox">
+     </p>
+     <!-- 입력 불가능한 상태 -->
+     <h2>disabled</h2>
+     <p>
+         입력 불가능한 상태
+         <input type="text" disabled>
+     </p>
+</body>
+</html>

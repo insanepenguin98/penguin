@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        @media screen and (max-width: 767px) {/*화면 넓이 0~767px까지*/
+            body{
+                background-color: lightcoral;
+                color: #fff;
+                font-weight: 900;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 959px) {/*화면 넓이 768px부터 959px까지*/
+            body{
+                background-color: lightsalmon;
+                color: #fff;
+                font-weight: 500;
+            } 
+        }
+        @media screen and (min-width: 960px) {/*화면넓이 960px 이상 부터*/
+            body{
+                background-color: lightseagreen;
+                color: #fff;
+                font-weight: 900;
+            } 
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        미디어쿼리
+        ============================
+        반응형 웹을 구현하기위해 가장 많이 사용되는 방식으로 css3 모듈중 하나.
+        사이트에 접속하는 장치에 따라 특정한 css스타일을 사용하도록 도와줌.
+        다양한 사이즈에 맞게 변경되는 스타일시트를 별도로 구현할 수 있음.
+        
+        [기본형]
+        1. @media screen and (조건) and (조건) (스타일)
+        2. @media screen and (조건) and (스타일)
+
+        - 조건에 들어가는 항목
+        1. min-width : 최소 넓이값 (넓이값 ~부터)
+        2. max-width : 최대 넓이값 (넓이값 ~까지)
+        
+        예시) @media screen and (min-width: 64px) and (max-width: 1024px) (스타일)
+        * 조건에 들어가는 픽셀값(해상도) 뒤에 세미콜론은 절대 들어가지 않아야 함!!!
+          만약 들어가면 해당 부분에서 문장이 끝난걸로 컴퓨터가 인식하기 때문에 스타일 시트에
+          접근할 수 없음.
+        
+        * @media는 모듈이름, screen은 화면속성, and 속성과 속성을 이어주는 속성으로 각각의 모든
+          속성들은 공백1칸으로 구분되어야 함. 
+     -->
+
+     <h1>Lorem Ipsum</h1>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laudantium magnam nesciunt cum itaque pariatur! 
+         Sit sapiente vero, amet quia accusamus maxime rem tempore nobis officia, debitis animi aliquid at.</p>
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laudantium magnam nesciunt cum itaque pariatur! 
+         Sit sapiente vero, amet quia accusamus maxime rem tempore nobis officia, debitis animi aliquid at.</p>
+    </body>
+</html>

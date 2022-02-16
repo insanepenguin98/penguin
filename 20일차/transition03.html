@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션으로 메뉴 만들기</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, li{
+            list-style: none;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+        }
+        /* 전체 세로 메뉴를 포함하는 ul의 넓이 */
+        .nav{
+            width: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .nav li{
+            font-size: 14px;
+            background-color: rgb(255, 205, 139);
+            text-align: center;
+            font-weight: 900;
+            border-bottom: 1px solid #fff;
+            line-height: 40px;
+            box-sizing: border-box;
+            color: #fff;
+        }
+        /* 2차메뉴 */
+        .submenu li{
+            font-size: 12px;
+            background-color: antiquewhite;
+            border-bottom: 1px solid burlywood;
+            line-height: 40px;
+            box-sizing: border-box;
+        }
+        .submenu li a{
+            color: burlywood;
+        }
+        .submenu{
+            height: 0;
+            overflow: hidden;/*높이만큼만 보임*/
+            transition-duration: 0.5s;
+            /* 자연스럽게 0.5초동안 동작 */
+        }
+        .nav li:hover .submenu{
+            height: 160px;
+        } 
+        .nav li:hover{
+            color: burlywood;
+        }
+        .submenu li:hover a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 세로메뉴(아코디언메뉴)만들기 -->
+    <ul class="nav">
+        <li>
+            MENU-1
+            <!-- submenu -->
+            <ul class="submenu">
+                <li><a href="#">menu-1</a></li>
+                <li><a href="#">menu-2</a></li>
+                <li><a href="#">menu-3</a></li>
+                <li><a href="#">menu-4</a></li>
+            </ul>
+        </li>
+        <li>
+            MENU-2
+            <!-- submenu -->
+            <ul class="submenu">
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu2-2</a></li>
+                <li><a href="#">menu2-3</a></li>
+                <li><a href="#">menu2-4</a></li>
+            </ul>
+        </li>
+        <li>
+            MENU-3
+            <!-- submenu -->
+            <ul class="submenu">
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu3-2</a></li>
+                <li><a href="#">menu3-3</a></li>
+                <li><a href="#">menu3-4</a></li>
+           </ul>
+        </li>
+        <li>
+            MENU-4
+            <!-- submenu -->
+            <ul class="submenu">
+                <li><a href="#">menu4-1</a></li>
+                <li><a href="#">menu4-2</a></li>
+                <li><a href="#">menu4-3</a></li>
+                <li><a href="#">menu4-4</a></li>
+            </ul>
+        </li>
+        <li>
+            MENU-5
+            <!-- submenu -->
+            <ul class="submenu">
+                <li><a href="#">menu5-1</a></li>
+                <li><a href="#">menu5-2</a></li>
+                <li><a href="#">menu5-3</a></li>
+                <li><a href="#">menu5-4</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

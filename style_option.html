@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <title> 스타일 속성 </title>
+        <style>
+            *{
+                margin: 0; padding: 0;
+            }
+            body{
+                font-family: 'Nanum Gothic', sans-serif;
+            }
+            .tb01{
+                width: 900px;
+                margin-bottom: 80px;
+                border-bottom: 1px dotted #ddd;
+            }
+            table{
+                margin: 10px; 
+                padding: 10px; 
+                width: 900px; 
+                border-spacing: 1px;
+            }
+            caption{
+                font-size: 20px;
+                width: 300px;
+                margin: 0 auto;
+                font-weight: bold;
+                color: #333;
+                line-height: 35px;
+                background-color: #efecff;
+            }
+            .sheet01{
+                background-color: #333; 
+                padding:8px;
+                color: #fff;
+            }
+            .sheet02{
+                padding: 8px; 
+                border-bottom: 1px solid #ddd;
+                border-left: 1px solid #ddd;
+            }
+            .sheet03{
+                padding: 8px; 
+                border-bottom: 1px solid #ddd;
+                border-left: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+            }
+            .col{
+                line-height: 25px;
+                padding: 8px; 
+                border-left: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+            }
+            .next{
+                margin-left: 48px;
+            }
+            .obl{font-style: oblique;}
+            .ita{font-style: italic;}
+            .sp{margin-left: 115px;}
+            .box1{
+                width: 833px;
+                border: 3px double #ddd;
+                margin: 20px;
+                padding: 20px;
+            }
+            .title1{
+                margin-bottom: 10px;
+                color: #333;
+            }
+            .box1 p{
+                line-height: 25px;
+                margin-bottom: 20px;
+            }
+            .name{
+                font-weight: bold;
+                margin-bottom: 10px;
+                display: block;
+                background-color: #ffd8d8;
+                line-height: 22px;
+                width: 341px;
+            }
+            .box2{
+                width: 800px;
+                border: 1px dashed #f38484;
+                padding: 10px;
+            }
+            
+            .b_box{
+                width: 900px;
+                padding-bottom: 80px;
+                margin-bottom: 80px;
+                border-bottom: 1px dotted #ddd;
+            }
+            .box_m{
+                border-radius: 10px;
+                text-align: center;
+                padding-top: 50px;
+                padding-bottom: 30px;
+                font-weight: bold;
+                margin-left: 20px;
+                height: 500px;
+                width: 900px;
+                background-color: lemonchiffon;
+                border: 1px solid #888;
+            }
+            .box_b{
+                border-radius: 10px;
+                margin: 0 auto;
+                width: 700px;
+                height: 400px;
+                padding-top: 40px;
+                background-color: lavender;
+                border: 1px solid #888;
+            }
+            .box_p{
+                border-radius: 10px;
+                margin: 0 auto;
+                width: 500px;
+                height: 300px;
+                padding-top: 30px;
+                background-color: lavenderblush;
+                border: 1px solid #888;
+            }
+            .box_c{
+                border-radius: 10px;
+                margin: 0 auto;
+                width: 300px;
+                height: 200px;
+                padding-top: 20px;
+                background-color: lightblue;
+                border: 1px solid #888;
+            }
+            .box_all{
+                width: 900px;
+                padding-bottom: 80px;
+                margin-bottom: 80px;
+                border-bottom: 1px dotted #ddd;
+            }
+            div>.media td{
+                text-align: center;
+            }
+            div>.media td:first-child{
+                text-align:left;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <!--글자에 관한 속성-->
+        <div class="tb01">     
+        <table>
+            <caption>글자에 관한 속성</caption>
+            <tr>
+                <th class="sheet01">속성</th>
+                <th class="sheet01">값</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <td class="sheet02">font-family</td>
+                <td class="sheet02">돋움, 맑은고딕, 바탕, Arial, Verdana, Tahoma</td>
+                <td class="sheet03">글꼴</td>
+            </tr>
+            <tr>
+                <td class="sheet02">font-size</td>
+                <td class="sheet02">12px, 3em, 9pt, 8ex...</td>
+                <td class="sheet03">글자 크기</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="3">
+                    <b>- px :</b> Font size를 지정할 때 가장 많이 사용되는 단위로, 크기를 지정하지 않으면 16px로 표시<br>
+                    <b>- em :</b> Font의 대문자 M을 기준으로 Parenet 요소에서 지정한 Font의 대문자 M의 너비를 1em으로<br>
+                    <span class="next">놓고 상대적 Value을 계산하는 방식으로, 지정하지 않으면 16px이 1em으로 지정된다.</span><br>
+                    <b>- pt : </b>일반 문서에서 많이 사용되는 단위입니다.<br>
+                    <b>- ex : </b>해당 Font의 소문자 x의 높이를 기준으로 크기를 결정하는 것
+                </td>
+            </tr>
+            <tr>
+                <td class="sheet02">font-style</td>
+                <td class="sheet02">italic, oblique...</td>
+                <td class="sheet03">글자 스타일</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="3">
+                    <b>- italic :</b> <span class="ita">폰트 기울이기</span><br>
+                    <b>- oblique :</b><span class="obl"> 폰트를 기울여져보이게 함</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="sheet02">line-height</td>
+                <td class="sheet02">24px, em, pt...</td>
+                <td class="sheet03">줄 간격</td>
+            </tr>
+            <tr>
+                <td class="sheet02">text-decoration</td>
+                <td class="sheet02">underline, overline, line-through, blink, none</td>
+                <td class="sheet03">글자 꾸밈</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="3">
+                    <b>- underline :</b> 밑줄<br>
+                    <b>- overline :</b> 윗줄<br>
+                    <b>- line-through :</b> 취소줄<br>
+                    <b>- blink :</b> 깜박임(-ie 6 7 미지원)<br>
+                    <b>- none :</b> 모든 글자 꾸밈 없애기
+                </td>
+            </tr>
+            <tr>
+                <td class="sheet02">font-weight</td>
+                <td class="sheet02">100~900,bold,bolder,normal,lighter</td>
+                <td class="sheet03">글자 굵기</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="3">
+                    <b>- 100~900 :</b> 숫자가 높을수록 굵어짐<br>
+                    <b>- bold :</b> 굵게<br>
+                    <b>- bolder :</b> 더 굵게<br>
+                    <b>- normal :</b> 폰트의 원래 굵기<br>
+                    <b>- lighter :</b> 원래 굵기보다 더 얇게
+                </td>
+            </tr>
+            <tr>
+                <td class="sheet02">color</td>
+                <td class="sheet02">#색상코드, 색상명, rgb(색상값)...</td>
+                <td class="sheet03">글자 색상</td>
+            </tr>
+            </table>
+        </div>
+        
+        
+        <!--백그라운드에 관한 속성-->
+         <div class="tb01">     
+        <table>
+            <caption>백그라운드에 관한 속성</caption>
+            <tr>
+                <th class="sheet01">속성</th>
+                <th class="sheet01">값</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <td class="sheet02">background-color</td>
+                <td class="sheet02">#색상코드, 색상명, rgb(색상값)...</td>
+                <td class="sheet03">배경 색상</td>
+            </tr>
+            <tr>
+                <td class="sheet02">background-image</td>
+                <td class="sheet02">url(이미지 경로)</td>
+                <td class="sheet03">배경 이미지</td>
+            </tr>
+            <tr>
+                <td class="sheet02">background-repeat</td>
+                <td class="sheet02">no-repeat, repeat-x, repeat-y</td>
+                <td class="sheet03">배경 이미지 반복</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="3">
+                    <b>- no-repeat :</b> 배경반복 안함. 불러온 이미지가 반복이 필요없는 통 이미지일때 선언<br>
+                    <b>- repeat-x :</b> 가로축으로 배경이미지 반복<br>
+                    <b>- repeat-y :</b> 세로축으로 배경이미지 반복
+                </td>
+            </tr>
+            <tr>
+                <td class="sheet02">background-attachment</td>
+                <td class="sheet02">fixed, scroll</td>
+                <td class="sheet03">스크롤에 따른 조정</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="3">
+                    <b>- fixed :</b> 항상 고정된 이미지로 동작<br>
+                    <b>- scroll :</b> 스크롤에 따라 이동하는 방법(Default)
+                </td>
+            </tr>
+            <tr>
+                <td class="sheet02">background-position</td>
+                <td class="sheet02">(숫자픽셀,숫자픽셀), left, center, right, top, bottom</td>
+                <td class="sheet03">배경 위치</td>
+            </tr>
+            <tr>
+                <td class="sheet02">background-size</td>
+                <td class="sheet02">100%, cover, contain, px값</td>
+                <td class="sheet03">배경 이미지 크기</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="3">
+                    <b>- cover :</b>  가로 세로 비율을 유지하여 배경을 사용하는 요소를 벗어나지 않는 최대 크기로 이미지를 확대 또는 축소<br>
+                    <b>- contain :</b> 가로 세로 비율을 유지하여 배경을 사용하는 요소를 다 채울 수 있게 이미지를 확대 또는 축소
+                </td>
+            </tr>
+            </table>
+        </div>
+        
+        
+        <!--문단에 관한 속성-->
+         <div class="tb01">     
+        <table>
+            <caption>문단에 관한 속성</caption>
+            <tr>
+                <th class="sheet01">속성</th>
+                <th class="sheet01">값</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <td class="sheet02">word-spacing</td>
+                <td class="sheet02">숫자입력(px, % 가능)</td>
+                <td class="sheet03">문자와 문자간의 간격</td>
+            </tr>
+            <tr>
+                <td class="sheet02">letter-spacing</td>
+                <td class="sheet02">숫자입력(px, % 가능)</td>
+                <td class="sheet03">자간 설정</td>
+            </tr>
+            <tr>
+                <td class="sheet02">text-align</td>
+                <td class="sheet02">center, left, right</td>
+                <td class="sheet03">글자 정렬</td>
+            </tr>
+            <tr>
+                <td class="sheet02">display</td>
+                <td class="sheet02">none, block, inline, inline-block</td>
+                <td class="sheet03">요소의 표시방법</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="3">
+                    <b>- none :</b> 요소 숨기기, 적용했던 효과 해제<br>
+                    <b>- block :</b> 요소 나타나게 하기, inline 속성의 태그를 block속성으로 바꾸기 ( block 속성의 대표적인 태그 div )<br>
+                    <b>- inline :</b> block 속성의 태그를 inline속성으로 바꾸기 ( inline 속성의 대표적인 태그 span )<br>
+                    <b>- inline-block : </b> inline의 속성을 가지고 있는 태그의 속성값을 유지하면서 block 속성도 함께<br>
+                    <span class="sp">사용하고 싶을때 쓰는 속성 (대표적인 태그는 img태그)</span>
+                </td>
+            </tr>
+            </table>
+        </div>
+        
+        
+        <!-- box에 관한 속성 -->
+        <div class="tb01">     
+        <table>
+            <caption>box에 관한 속성</caption>
+            <tr>
+                <th class="sheet01">속성</th>
+                <th class="sheet01">값</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <td class="sheet02">width</td>
+                <td class="sheet02">숫자입력(px, % 가능)</td>
+                <td class="sheet03">넓이</td>
+            </tr>
+            <tr>
+                <td class="sheet02">height</td>
+                <td class="sheet02">숫자입력(px, % 가능)</td>
+                <td class="sheet03">높이</td>
+            </tr>
+            <tr>
+                <td class="sheet02">padding</td>
+                <td class="sheet02">숫자입력(px, % 가능)</td>
+                <td class="sheet03">안쪽 여백</td>
+            </tr>
+            <tr>
+                <td class="sheet02">margin</td>
+                <td class="sheet02">숫자입력(px, % 가능)</td>
+                <td class="sheet03">바깥쪽 여백</td>
+            </tr>
+            <tr>
+                <td class="sheet02">border</td>
+                <td class="sheet02">테두리 굵기, 테두리 스타일, 테두리 색상을 지정</td>
+                <td class="sheet03">테두리</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="3">
+                    테두리 굵기는 px로 지정<br>
+                    테두리 스타일은 solid, dashed, dotted, double등으로 지정<br>
+                    테두리 색상은 #색상코드 등으로 지정<br>
+                    <b>ex) border: 1px solid #e24747;</b>
+                </td>
+            </tr>
+            </table>
+        </div>
+        
+        
+        <!--외부스타일-->
+        <div class="b_box">
+        <div class="box1">
+            <h2 class="title1">외부 스타일 지정</h2>
+            <p>
+            웹 사이트 제작 시 문서 하나로만 끝나는 경우는 거의 없습니다. 대부분 디자인의 일괄성을 위해 같은 스타일을 여러 번 사용합니다. 그리고 페이지별로 스타일 시트가 나눠지는 경우가 많습니다. 이때 똑같은 내용을 문서에 계속 삽입하는 것도 페이지가 로딩되는 속도와 코드 수정 시 효율적이지 않습니다. 그래서 최근에는 HTML문서와 스타일문서(CSS), 스크립트문서(JS)를 별도로 관리합니다. 코드 과정을 배우는 단계이기 때문에 스타일을 HTML문서에 함께 작성하여 표현하지만 익숙해지면 별도의 CSS 파일로 저장해서 HTML문서로 불러옵니다.
+            </p>
+            <span class="name">[외부 스타일시트로 html문서에 연결하는 방법]</span>
+            <div class="box2">
+                &lt;link rel ="stylesheet" href="외부 스타일 파일 경로" type="text/css"&gt;
+            </div>
+        </div>
+        </div>
+        
+        <!--박스의 구조-->
+        <div class="box_all">
+        <div class="box_m">
+            margin
+            <div class="box_b">
+                border
+                <div class="box_p">
+                    padding
+                    <div class="box_c">
+                        contents
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!--가로세로의 속성값-->
+         <div class="tb01">     
+        <table>
+            <caption>가로 세로의 속성값 설명</caption>
+            <tr>
+                <th class="sheet01">속성</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <td class="sheet02">크기</td>
+                <td class="sheet03">넓이나 높이값을 px형태의 단위로 지정</td>
+            </tr>
+            <tr>
+                <td class="sheet02">백분율</td>
+                <td class="sheet03">박스 형태의 크기를 부모 박스 기준으로 %로 지정</td>
+            </tr>
+            <tr>
+                <td class="sheet02">auto</td>
+                <td class="sheet03">박스 형태의 넓이와 높이 값을 콘텐츠 양에 따라 자동결정하며 기본값임</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!-- 박스의 배치(float) -->
+        <div class="tb01">     
+        <table>
+            <caption>float 속성값</caption>
+            <tr>
+                <th class="sheet01">스타일 속성과 값</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자{float:left;}</td>
+                <td class="sheet03">block 속성의 선택자를 기준으로 왼쪽정렬</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자{float:right;}</td>
+                <td class="sheet03">block 속성의 선택자를 기준으로 오른쪽정렬</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--CSS3선택자의 종류-->
+        <div class="tb01">     
+        <table>
+            <caption>CSS3선택자의 종류</caption>
+            <tr>
+                <th class="sheet01">선택자구분</th>
+                <th class="sheet01">형태</th>
+                <th class="sheet01">활용 예</th>
+            </tr>
+            <tr>
+                <td class="sheet02">전체 선택자</td>
+                <td class="sheet02">*</td>
+                <td class="sheet03">*</td>
+            </tr>
+            <tr>
+                <td class="sheet02">태그 선택자</td>
+                <td class="sheet02">태그</td>
+                <td class="sheet03">h1</td>
+            </tr>
+            <tr>
+                <td class="sheet02">아이디 선택자</td>
+                <td class="sheet02">#아이디</td>
+                <td class="sheet03">#header</td>
+            </tr>
+            <tr>
+                <td class="sheet02">클래스 선택자</td>
+                <td class="sheet02">.클래스</td>
+                <td class="sheet03">.item</td>
+            </tr>
+            <tr>
+                <td class="sheet02">후손 선택자</td>
+                <td class="sheet02">선택자안에 선택자 불러오기</td>
+                <td class="sheet03">header h1</td>
+            </tr>
+            <tr>
+                <td class="sheet02">자손 선택자</td>
+                <td class="sheet02">선택자>선택자</td>
+                <td class="sheet03">header>h1</td>
+            </tr>
+            <tr>
+                <td class="sheet02" rowspan="6">속성 선택자</td>
+                <td class="sheet02">선택자[속성=값]</td>
+                <td class="sheet03">input[type=text]</td>
+            </tr>
+            <tr>  
+                <td class="sheet02">선택자[속성~=값]</td>
+                <td class="sheet03">div[data-role~=row]</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자[속성|=값]</td>
+                <td class="sheet03">div[data-role|=row]</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자[속성^=값]</td>
+                <td class="sheet03">div[data-role^=row]</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자[속성$=값]</td>
+                <td class="sheet03">div[data-role$=9]</td>
+            </tr><tr>
+                <td class="sheet02">선택자[속성*=값]</td>
+                <td class="sheet03">div[data-role*=row]</td>
+            </tr>
+            <tr>
+                <td class="sheet02" rowspan="2">동위 선택자</td>
+                <td class="sheet02">선택자+선택자</td>
+                <td class="sheet03">h1+div</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자~선택자</td>
+                <td class="sheet03">h1~div</td>
+            </tr>
+            <tr>
+                <td class="sheet02" rowspan="8">구조 선택자</td>
+                <td class="sheet02">선택자:first-child</td>
+                <td class="sheet03">li:first-child</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자:last-child</td>
+                <td class="sheet03">li:first-child</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자:nth-child(수열)</td>
+                <td class="sheet03">li:nth-child(2n+1)</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자:nth-last-child(수열)</td>
+                <td class="sheet03">li:nth-last-child(2n+1)</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자:first-of-type</td>
+                <td class="sheet03">h1:first-of-type</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자:last-of-type</td>
+                <td class="sheet03">h1:last-of-type</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자:nth-of-type(수열)</td>
+                <td class="sheet03">h1:nth-of-type(2n+1)</td>
+            </tr>
+            <tr>
+                <td class="sheet02">선택자:nth-last-of-type(수열)</td>
+                <td class="sheet03">h1:nth-last-of-type(2n+1)</td>
+            </tr>
+            <tr>
+                <td class="sheet02" rowspan="2">반응 선택자</td>
+                <td class="sheet02">선택자:active</td>
+                <td class="sheet03">div:active</td>
+            </tr>
+            <tr>  
+                <td class="sheet02">선택자:hover</td>
+                <td class="sheet03">div:hover</td>
+            </tr>
+            <tr>
+                <td class="sheet02" rowspan="4">상태 선택자</td>
+                <td class="sheet02">선택자:checked</td>
+                <td class="sheet03">input:checked</td>
+            </tr>
+            <tr>  
+                <td class="sheet02">선택자:focus</td>
+                <td class="sheet03">input:focus</td>
+            </tr>
+            <tr>  
+                <td class="sheet02">선택자:enabled</td>
+                <td class="sheet03">input:enabled</td>
+            </tr>
+            <tr>  
+                <td class="sheet02">선택자:disabled</td>
+                <td class="sheet03">input:disabled</td>
+            </tr>
+            <tr>
+                <td class="sheet02" rowspan="2">링크 선택자</td>
+                <td class="sheet02">선택자:link</td>
+                <td class="sheet03">a:link</td>
+            </tr>
+            <tr>  
+                <td class="sheet02">선택자:visited</td>
+                <td class="sheet03">a:visited</td>
+            </tr>
+            <tr>
+                <td class="sheet02" rowspan="5">문자 선택자</td>
+                <td class="sheet02">선택자::first-letter</td>
+                <td class="sheet03">p::first-letter</td>
+            </tr>
+            <tr>  
+                <td class="sheet02">선택자::first-line</td>
+                <td class="sheet03">p::first-line</td>
+            </tr>
+            <tr>  
+                <td class="sheet02">선택자::after</td>
+                <td class="sheet03">p::after</td>
+            </tr>
+            <tr>  
+                <td class="sheet02">선택자::before</td>
+                <td class="sheet03">p::before</td>
+            </tr>
+            <tr>  
+                <td class="sheet02">선택자::selection</td>
+                <td class="sheet03">p::selection</td>
+            </tr>
+            <tr>
+                <td class="sheet02">부정 선택자</td>
+                <td class="sheet02">선택자:not(선택자)</td>
+                <td class="sheet03">il:not(.item)</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--iframe-->
+         <div class="tb01">     
+        <table>
+            <caption>iframe</caption>
+            <tr>
+                <th class="sheet01">형식</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <td class="sheet02">&lt;iframe src="불러오고자 하는 웹페이지 주소 또는 파일명" 옵션&gt;&lt;/iframe&gt;</td>
+                <td class="sheet03">태그 형식</td>
+            </tr>
+            <tr>
+                <td class="sheet02">옵션 1 : frameborder="0"</td>
+                <td class="sheet03">테두리 없음</td>
+            </tr>
+            <tr>
+                <td class="sheet02">옵션 2 : scrolling="yes"or"no"</td>
+                <td class="sheet03">스크롤바 유무</td>
+            </tr>
+            <tr>
+                <td class="sheet02">옵션 3 : width="넓이"</td>
+                <td class="sheet03">iframe의 가로 크기</td>
+            </tr>
+            <tr>
+                <td class="sheet02">옵션 4 : height="높이"</td>
+                <td class="sheet03">iframe의 세로 높이</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--static,relative-->
+         <div class="tb01">     
+        <table>
+            <caption>static,relative</caption>
+            <tr>
+                <th class="sheet01">속성</th>
+                <th class="sheet01">스타일</th>
+                <th class="sheet01">비고</th>
+            </tr>
+            <tr>
+                <td class="sheet02">static</td>
+                <td class="sheet02">선택자{position:static;}</td>
+                <td class="sheet03">스타일을 지정하지 않았을때의 값</td>
+            </tr>
+            <tr>
+                <td class="sheet02">relative</td>
+                <td class="sheet02">선택자{position:relative;}</td>
+                <td class="sheet03">상대 위치 좌표</td>
+            </tr>
+            <tr>
+                <td class="sheet02">absolute</td>
+                <td class="sheet02">선택자{position:absolute;}</td>
+                <td class="sheet03">절대 위치 좌표</td>
+            </tr>
+            <tr>
+                <td class="sheet02">fixed</td>
+                <td class="sheet02">선택자{position:fixed;}</td>
+                <td class="sheet03">스타일을 지정하지 않았을때의 값</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--absolute,fixed-->
+         <div class="tb01">     
+        <table>
+            <caption>absolute, fixed</caption>
+            <tr>
+                <th class="sheet01">좌표속성</th>
+                <th class="sheet01">스타일속성</th>
+                <th class="sheet01">실행결과</th>
+            </tr>
+            <tr>
+                <td class="sheet02">static</td>
+                <td class="sheet02">top,left</td>
+                <td class="sheet03">적용 안됨</td>
+            </tr>
+            <tr>
+                <td class="sheet02">relative</td>
+                <td class="sheet02">top,left</td>
+                <td class="sheet03">적용 됨</td>
+            </tr>
+            <tr>
+                <td class="sheet02">absolute</td>
+                <td class="sheet02">top,bottom,left,right</td>
+                <td class="sheet03">적용 됨</td>
+            </tr>
+            <tr>
+                <td class="sheet02">fixed</td>
+                <td class="sheet02">top,bottom,left,right</td>
+                <td class="sheet03">적용 되며 박스의 위치가 고정됨.</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--브라우저별 지원되는 멀티미디어파일-->
+         <div class="tb01">     
+        <table class="media">
+            <caption>브라우저별 지원되는<br>멀티미디어파일</caption>
+            <tr>
+                <th class="sheet01"  rowspan="2">브라우저</th>
+                <th class="sheet01" colspan="3">비디오</th>
+                <th class="sheet01" colspan="2">오디오</th>
+            </tr>
+            <tr>
+                <th class="sheet01">mp4</th>
+                <th class="sheet01">webm</th>
+                <th class="sheet01">ogv</th>
+                <th class="sheet01">mp3</th>
+                <th class="sheet01">ogg</th>
+            </tr>
+            <tr>
+                <td class="sheet02">인터넷 익스플로러</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">X</td>
+                <td class="sheet02">X</td>
+                <td class="sheet02">O</td>
+                <td class="sheet03">X</td>
+            </tr>
+            <tr>
+                <td class="sheet02">크롬</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">O</td>
+                <td class="sheet03">O</td>
+            </tr>
+            <tr>
+                <td class="sheet02">파이어폭스</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">O</td>
+                <td class="sheet03">O</td>
+            </tr>
+            <tr>
+                <td class="sheet02">사파리</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">X</td>
+                <td class="sheet02">X</td>
+                <td class="sheet02">O</td>
+                <td class="sheet03">X</td>
+            </tr>
+             <tr>
+                <td class="sheet02">오페라</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">O</td>
+                <td class="sheet03">O</td>
+            </tr>
+            <tr>
+                <td class="sheet02">ios 사파리</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">X</td>
+                <td class="sheet02">X</td>
+                <td class="sheet02">O</td>
+                <td class="sheet03">X</td>
+            </tr>
+            <tr>
+                <td class="sheet02">안드로이드 브라우저</td>
+                <td class="sheet02">O</td>
+                <td class="sheet02">X</td>
+                <td class="sheet02">X</td>
+                <td class="sheet02">O</td>
+                <td class="sheet03">O</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--시맨틱 구조-->
+        <div class="tb01">     
+        <table>
+            <caption>시맨틱 구조</caption>
+            <tr>
+                <th class="sheet01">태그</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <th class="sheet02">header</th>
+                <td class="sheet03">페이지 맨 위쪽에 삽입하는 머리말을 의미</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="2">
+                header:머리말<br>
+                로고를 넣거나 검색창을 넣기도 하며 &lt;nav&gt;태그를 활용한 메뉴의 배치도 가능.
+                </td>
+            </tr>
+            <tr>
+                <th class="sheet02">nav</th>
+                <td class="sheet03">내비게이션을 의미합니다.</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="2">
+                nav:내비게이션 메뉴<br>
+                header를 비록한 다른 태그의 내부에도 사용이 가능하며 대부분 메뉴 항목들에 대한 배치가
+                    이루어집니다.
+                </td>
+            </tr>
+            <tr>
+                <th class="sheet02">aside</th>
+                <td class="sheet03">사이드에 위치하는 공간을 의미</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="2">
+                aside: 본문 이외의 내용<br>
+                홈페이지 내부의 사이드에 위치하는 기타 내용들을 넣을 때 주로 사용하며, 광고 배너나
+                링크에 대한 부가적인 내용들이 들어가기도 합니다.
+                </td>
+            </tr>
+             <tr>
+                <th class="sheet02">section</th>
+                <td class="sheet03">여러 중심내용들을 감싸는 공간</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="2">
+                section: 콘텐츠가 들어가는 본문 영역<br>
+                홈페이지의 본문에 해당되는 큰 단락들을 section으로 묶어서 나타냅니다. 다시말해 콘텐츠 영역이라고 볼 수 있습니다.
+                </td>
+            </tr>
+            <tr>
+                <th class="sheet02">article</th>
+                <td class="sheet03">글자가 많이 들어가는 부분을 의미합니다.</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="2">
+                article: 콘텐츠가 들어가는 영역<br>
+                article의 사전적인 의미는 '기사'입니다.<br>
+                웹 상의 실제 내용을 담는 영역입니다. section과 구분하자면 개별적인 내용들은 article을 주로 사용하고
+                성격이 비슷한 콘텐츠 여러개를 주제별로 묶을 때에는 section을 사용합니다.
+                </td>
+            </tr>
+            <tr>
+                <th class="sheet02">footer</th>
+                <td class="sheet03">페이지 맨 아래에 주소와 기타 내용들이 들어가는 공간</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="2">
+                footer: 웹문서의 끝자락에 표기되는 내용<br>
+                홈페이지의 제작정보를 비롯한 저작권, 부가적인 메뉴에 대한 내용이 들어갑니다.
+                </td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--트랜지션 속성과 함께 사용할 수 있는 스타일 속성-->
+         <div class="tb01">     
+        <table>
+            <caption>트랜지션 속성과 함께<br>사용할 수 있는 스타일 속성</caption>
+            <tr>
+                <th class="sheet01">속성</th>
+                <th class="sheet01">스타일 속성</th>
+            </tr>
+            <tr>
+                <td class="sheet02">위치속성</td>
+                <td class="sheet03">top, left, bottom, right</td>
+            </tr>
+            <tr>
+                <td class="sheet02">크기속성</td>
+                <td class="sheet03">width, height</td>
+            </tr>
+            <tr>
+                <td class="sheet02">박스속성</td>
+                <td class="sheet03">padding, margin</td>
+            </tr>
+            <tr>
+                <td class="sheet02">테두리속성</td>
+                <td class="sheet03">border-width:테두리두께, border-radius:모서리 둥글기, border-color: 테두리색상</td>
+            </tr>
+            <tr>
+                <td class="sheet02">색상속성</td>
+                <td class="sheet03">color,background-color</td>
+            </tr>
+            <tr>
+                <td class="sheet02">투명도속성</td>
+                <td class="sheet03">opacity</td>
+            </tr>
+            <tr>
+                <td class="sheet02">변환속성</td>
+                <td class="sheet03">transform</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--트랜지션 속성의 종류-->
+         <div class="tb01">     
+        <table>
+            <caption>트랜지션 속성</caption>
+            <tr>
+                <th class="sheet01">속성</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <td class="sheet02">transition</td>
+                <td class="sheet03">모든 transition 속성을 한 번에 사용합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">transition-delay</td>
+                <td class="sheet03">이벤트 발생 후 몇초 후에 재생할지 지정합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">transition-duration</td>
+                <td class="sheet03">몇초동안 재생할지 지정합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">transition-property</td>
+                <td class="sheet03">어떤 속성을 변형할지 지정합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">transition-timing-function</td>
+                <td class="sheet03">수치 변형 함수를 지정합니다.</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--애니메이션 속성의 종류-->
+         <div class="tb01">     
+        <table>
+            <caption>애니메이션 속성</caption>
+            <tr>
+                <th class="sheet01">속성</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <td class="sheet02">animation</td>
+                <td class="sheet03">모든 animation 속성을 한 번에 적용합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">animation-delay</td>
+                <td class="sheet03">이벤트 발생 후 몇초 후에 재생할지 지정합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">animation-diretion</td>
+                <td class="sheet03">애니메이션 진행 방향을 설정합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">animation-duration</td>
+                <td class="sheet03">애니메이션을 몇 초동안 재생할지 지정합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">animation-interation-count</td>
+                <td class="sheet03">애니메이션 반복 횟수를 지정합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02"><mark>animation-name</mark></td>
+                <td class="sheet03">(중요!)애니메이션의 이름을 지정합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">animation-state</td>
+                <td class="sheet03">애니메이션의 재생 상태를 지정합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">animation-timing-function</td>
+                <td class="sheet03">수치 변형 함수를 지정합니다.</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--2차원 변환함수-->
+         <div class="tb01">     
+        <table>
+            <caption>2차원 변환함수</caption>
+            <tr>
+                <th class="sheet01">변환함수</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <td class="sheet02">translate(translateX,translateY)</td>
+                <td class="sheet03">특정 크키만큼 이동합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">translateX(translateX)</td>
+                <td class="sheet03">X축으로 특정 크키만큼 이동합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">translateY(translateY)</td>
+                <td class="sheet03">Y축으로 특정 크키만큼 이동합니다.</td>
+            </tr>
+            <tr>
+                <td class="col" colspan="2">
+                    translateX,translateY를 입력하게되면 한개의 축으로만 결과가 출력됩니다.<br>
+                    CSS에서 같은 속성에 대한 값으로 보기 때문에 마지막 스타일이 이전 스타일을 덮어씌워 적용됩니다.<br>
+                    그래서 동시에 적용하고자 할때는 transfom를 사용합니다.<br>
+                    ex)<br>
+                    .box{<br>
+                        /*translateX(translateX)*/<br>
+                        transform: stranslateX(350px);<br>
+                        /*translateY(translateY)*/<br>
+                        transform: stranslateY(350px);<br>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td class="sheet02">scale(scaleX,scaleY)</td>
+                <td class="sheet03">특정 크기만큼 확대 및 축소합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">scaleX(scaleX)</td>
+                <td class="sheet03">X축으로 특정 크기만큼 확대 및 축소합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">scaleY(scaleY)</td>
+                <td class="sheet03">Y축으로 특정 크기만큼 확대 및 축소합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">skew(angleX,angleY)</td>
+                <td class="sheet03">특정각도만큼 기울입니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">skewX(angleX)</td>
+                <td class="sheet03">X축으로 특정각도만큼 기울입니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">skewY(angleY)</td>
+                <td class="sheet03">Y축으로 특정각도만큼 기울입니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">rotate(angleZ)</td>
+                <td class="sheet03">특정 각도만큼 회전합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">transform-origin</td>
+                <td class="sheet03">변형되는 요소의 기준점을 변경하는 스타일 속성</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--3차원 변환함수-->
+         <div class="tb01">     
+        <table>
+            <caption>3차원 변환함수</caption>
+            <tr>
+                <th class="sheet01">변환함수</th>
+                <th class="sheet01">설명</th>
+            </tr>
+            <tr>
+                <td class="sheet02">translate3d(translateX,translateY,translateZ)</td>
+                <td class="sheet03">특정 크키만큼 이동합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">translateX(translateX)</td>
+                <td class="sheet03">X축으로 특정 크키만큼 이동합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">translateY(translateY)</td>
+                <td class="sheet03">Y축으로 특정 크키만큼 이동합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">translateZ(translateZ)</td>
+                <td class="sheet03">Z축으로 특정 크키만큼 이동합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">scale3d(scaleX,scaleY,scaleZ)</td>
+                <td class="sheet03">특정 크기만큼 확대 및 축소합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">scaleX(scaleX)</td>
+                <td class="sheet03">X축으로 특정 크기만큼 확대 및 축소합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">scaleY(scaleY)</td>
+                <td class="sheet03">Y축으로 특정 크기만큼 확대 및 축소합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">scaleZ(scaleZ)</td>
+                <td class="sheet03">Z축으로 특정 크기만큼 확대 및 축소합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">rotate3d(angleX,angleY,angleZ)</td>
+                <td class="sheet03">특정 각도만큼 회전합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">rotateX(angleX)</td>
+                <td class="sheet03">X축으로 특정 각도만큼 회전합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">rotateY(angleY)</td>
+                <td class="sheet03">Y축으로 특정 각도만큼 회전합니다.</td>
+            </tr>
+            <tr>
+                <td class="sheet02">rotateZ(angleZ)</td>
+                <td class="sheet03">Z축으로 특정 각도만큼 회전합니다.</td>
+            </tr>
+            </table>
+        </div>
+        
+        <!--bootstrap-->
+         <div class="tb01">   
+        <table>
+            <caption>bootstrap</caption>
+            <tr>
+            <td><strong>[해상도별 화면 종류와 기기 종류]</strong></td>
+            </tr>
+            <tr>
+                <th class="sheet01">구분</th>
+                <th class="sheet01">스마트폰</th>
+                <th class="sheet01">태블릿</th>
+                <th class="sheet01">데스크톱</th>
+                <th class="sheet01">큰 데스크톱</th>
+            </tr>
+            <tr>
+                <th class="sheet02">넓이</th>
+                <td class="sheet02">768px 미만</td>
+                <td class="sheet02">768px 이상</td>
+                <td class="sheet02">992px 이상</td>
+                <td class="sheet03">1200px 이상</td>
+            </tr>
+            <tr>
+                <th class="sheet02">화면종류</th>
+                <td class="sheet02">.col-xs</td>
+                <td class="sheet02">.col-sm-</td>
+                <td class="sheet02">.col-md-</td>
+                <td class="sheet03">.col-lg-</td>
+            </tr>
+            <tr>
+                <th class="sheet02">클래스 적용방법</th>
+                <td class="col" colspan="4">.col-화면종류-한 영역으로 묶을 column개수</td>
+            </tr>
+            </table>
+             
+             <table>
+                <tr>
+                <td colspan="2"><strong>[부트스트랩으로 요소 숨기기/보이기]</strong></td>
+                </tr>
+                <tr>
+                    <th class="sheet01">화면 크기</th>
+                    <th class="sheet01">class</th>
+                </tr>
+                <tr>
+                    <th class="sheet02">모든 화면에서 숨기기</th>
+                    <td class="sheet02">.d-none</td>
+                </tr>
+                <tr>
+                    <th class="sheet02">xs 크기에서만 숨기기</th>
+                    <td class="sheet02">.d-none .d-sm-block</td>
+                </tr>
+                <tr>
+                    <th class="sheet02">sm 크기에서만 숨기기</th>
+                    <td class="sheet02">.d-sm-none .d-md-block</td>
+                </tr>
+                <tr>
+                    <th class="sheet02">md 크기에서만 숨기기</th>
+                    <td class="sheet02">.d-md-none .d-lg-block</td>
+                </tr>
+                <tr>
+                    <th class="sheet02">lg 크기에서만 숨기기</th>
+                    <td class="sheet02">.d-lg-none .d-xl-block</td>
+                </tr>
+                <tr>
+                    <th class="sheet02">xl 크기에서만 숨기기</th>
+                    <td class="sheet02">.d-xl-none</td>
+                </tr>
+                <tr>
+                    <th class="sheet02">모든 화면에서 보이기</th>
+                    <td class="sheet02">.d-block</td>
+                </tr>
+                <tr>
+                    <th class="sheet02">xs 크기에서만 보이기</th>
+                    <td class="sheet02">.d-block .d-sm-none</td>
+                </tr>
+                <tr>
+                    <th class="sheet02">sm 크기에서만 보이기</th>
+                    <td class="sheet02">.d-none .d-sm-block .d-md-none</td>
+                </tr>
+                <tr>
+                    <th class="sheet02">md 크기에서만 보이기</th>
+                    <td class="sheet02">.d-none .d-md-block .d-lg-none</td>
+                </tr>
+                <tr>
+                    <th class="sheet02">lg 크기에서만 보이기</th>
+                    <td class="sheet02">.d-none .d-lg-block .d-xl-none</td>
+                </tr>
+                <tr>
+                    <th class="sheet02">xl 크기에서만 보이기</th>
+                    <td class="sheet02">.d-none .d-xl-block</td>
+                </tr>
+            </table>
+        </div>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

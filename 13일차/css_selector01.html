@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다양한 css3 선택자</title>
+    <style>
+        div>h2{/*자손 개념 문법*/
+            color: crimson;
+        }
+
+        div span{/*후손 개념 문법*/
+            color:lawngreen;
+        }
+        div>span{/*자손 개념 문법*/
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        css3 선택자
+        ===================
+        특정한 html태그를 선택할때 사용하는 기능. 이 선택자들을 활용하면
+        더 효율적으로 코드를 구성할 수 있음.
+
+        1. 후손 선택자와 자손 선택자
+        ==============================
+        후손선택자는 부모 선택자 안에 들어있는 모든 자식 선택자들을 뜻함.
+        자손선택자는 부모 선택자 안에 바로 아랫계층에 있는 자식 선택자들을 뜻함.
+        [기본형]
+        1. 선택자A 선택자B : 후손 선택자는 공백으로 표기함.
+           - 선택자A안에 있는 후손 선택자B를 불러옴.
+        2. 선택자A > 선택자B : 자손 선택자는 >로 표기함.
+           - 선택자A안에 있는 자손 선택자B를 불러옴.
+     -->
+     <div>
+         <h1>제목1</h1>
+         <h2>제목2</h2>
+         <div>
+             <ul>
+                 <li>menu1</li>
+                 <li>
+                     <span>menu2</span>
+                </li>
+                 <li>menu3</li>
+             </ul>
+         </div>
+         <h2>제목2</h2>
+         <span>span</span>
+     </div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱 실습</title>
+    <style>
+        /* 초기화 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: #222;
+        }
+        ul,li{
+            list-style: none;
+        }
+        img{
+            border: none;
+            display: block;
+        }
+        body{
+            font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+            font-size: 14px;
+            color: #222;
+            line-height: 28px;
+        }
+        #wrap{
+            width: 100%;
+            height: auto;
+        }
+        /* header */
+        header{
+            width: 1000px;
+            height: 100px;
+            margin: 0 auto;
+            margin-top: 10px;
+            border: 2px solid #aaa;
+            overflow: hidden; /*높이값이 정해져 있으면 영역을 벗어나는 자식들은 모두 숨겨짐*/
+            box-sizing: border-box;
+        }
+        /* logo */
+        header h1{
+            width: 200px;
+            line-height: 100px;
+            background-color: antiquewhite;
+            float: left;
+            text-align: center;
+        }
+        nav{
+            float: right;
+            overflow: hidden;
+            position: relative;
+        }
+        nav ul{
+            overflow: hidden;
+            background-color: bisque;
+        }
+        nav ul:nth-of-type(1) li{
+            float: left;
+            padding-left: 20px;
+            background-color: burlywood;
+            line-height: 30px;
+        }
+        nav ul:nth-of-type(2) li{
+            float: left;
+            padding-left: 20px;
+            background-color: rgb(192, 158, 113);
+            line-height: 30px;
+            margin-top: 36px;
+        }
+        /* content영역 */
+        main{
+            width: 1000px;
+            overflow: hidden;/*높이값이 없으면 자식요소만큼 알아서 높이값을 잡음*/
+            margin: 10px auto;
+        }
+        main section{
+            width: 700px;
+            overflow: hidden;
+            float: left;
+        }
+        main section article{
+            width: 700px;
+            border: 2px solid #aaa;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-bottom: 10px ;
+        }
+        article h2{
+            background-color: burlywood;
+        }
+        aside{
+            width: 280px;
+            float: right;
+            overflow: hidden;
+            border: 2px solid #aaa;
+            padding: 20px;
+            box-sizing: border-box;  
+        }
+        aside > h2{
+            background-color: lemonchiffon;
+        }
+        aside input[type=text]{
+            width: 140px;
+            height: 20px;
+        }
+        aside button{
+            width: 55px;
+            height: 22px;
+            background-color: lemonchiffon;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        aside > p{
+            margin-bottom: 10px;
+            border-bottom: 1px solid #aaa;
+        }
+        aside .bannerbox{
+            background-color: antiquewhite;
+            margin-top: 10px;
+        }
+        /* footer */
+        footer{
+            width: 1000px;
+            height: 50px;
+            line-height: 50px;
+            margin: 10px auto;
+            border: 2px solid #aaa;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <!-- header -->
+        <header>
+            <h1>WEB-LOGO</h1>
+            <!-- 메뉴 -->
+            <nav>
+                <ul>
+                    <li>menu-1</li>
+                    <li>menu-1</li>
+                    <li>menu-1</li>
+                    <li>menu-1</li>
+                </ul>
+                <ul>
+                    <li>menu-2</li>
+                    <li>menu-2</li>
+                    <li>menu-2</li>
+                    <li>menu-2</li>
+                </ul>
+            </nav>
+        </header>
+        <!-- 컨텐츠 영역 -->
+        <main>
+            <!-- 왼쪽 본문내용부분 -->
+            <section>
+                <!-- article-내용 -->
+                <article>
+                    <h2>Main article</h2>
+                    <p>ColorZilla for Firefox is an add-on that 
+                       assists web developers and graphic designers 
+                       with color related tasks - both basic and advanced.
+                    </p>
+                </article>
+                <article>
+                    <h2>Main article</h2>
+                    <p>ColorZilla for Firefox is an add-on that 
+                       assists web developers and graphic designers 
+                       with color related tasks - both basic and advanced.
+                    </p>
+                </article>
+                <article>
+                    <h2>Main article</h2>
+                    <p>ColorZilla for Firefox is an add-on that 
+                       assists web developers and graphic designers 
+                       with color related tasks - both basic and advanced.
+                    </p>
+                </article>
+            </section>
+            <!-- 오른쪽 aside -->
+            <aside>
+                <h2>Right aside</h2>
+                <p>
+                    ColorZilla for Firefox is an add-on that 
+                   assists web developers and graphic designers 
+                   with color related tasks - both basic and advanced.
+                </p>
+                <label for="email">Mail</label>
+                <input type="text">
+                <button>mail to</button>
+                <div class="bannerbox">
+                    <h2>TEXT</h2>
+                    <p>banner</p>
+                </div>
+            </aside>
+        </main>
+        <!-- footer -->
+        <footer>
+            <p>HTML5 COPYRIGHT</p>
+        </footer>
+    </div>
+</body>
+</html>

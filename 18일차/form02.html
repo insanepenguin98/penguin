@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다양한 input태그</title>
+    <style>
+        input{
+            outline: none;
+            border: 1px solid #ccc;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        input태그
+        =============================
+        방문자로부터 정보를 입력받을 때 주로 사용되는 태그로 '폼 요소'를 뜻함.
+        input태그는 유형별로 만들어져 있으며 type속성에 의해 결정됨.
+        name속성과 id속성을 이용해 같은항목을 구분하여 지정할 수 있음.
+
+        [기본형]
+        <input type="속성값" name="lable이름" id="lable이름">
+
+        [속성값]
+        1. hidden : 화면의 폼에서는 보이지 않지만 사용자가 입력을 마치고 폼을 서버로
+                    전송할때 함께 전송되는 요소. 방문자에게 보여줄 필요는 없지만 
+                    관리자가 알아야하는 내용을 지정할 때 사용함.
+        2. text : 가로로 짧은 글을 입력받을때 사용. 주로 아이디, 이름, 주소를 입력받을때 
+                  사용됨.(=텍스트필드)
+        3. password : 텍스트필드와 모양이 같지만 비밀번호를 입력할 때 사용됨. 문자를 입력하면
+                      특수문자로 표시됨.
+        4. search : 검색 필드를 만들때 사용함. 이전에는 텍스트필드를 주로 사용했지만 html5에서
+                    세분화된 항목 중 하나. 텍스트를 입력하면 키워드를 지울 수 있도록 x표시가
+                    나타남.
+        5. url : 웹 주소를 입력받을때 사용됨. 
+        6. email : 메일주소를 입력할 경우 email필드를 사용하게되면 실제 폼 양식이 동작했을때
+                   이메일 양식에 맞게 작성되었는지 브라우저 자체에서 체크함. 
+                   (@포함여부, .com 주소여부)
+        7. tel : 사용자가 입력한 정보를 일반 텍스트가 아닌 전화번호로 인식하여 바로 전화를 걸 수 
+                 있도록 하는 필드. pc화면에서는 텍스트필드 형태로 보이지만 모바일 화면에서는 숫자
+                 키보드로 자동 전환됨.
+        8. number : 숫자 생성 양식을 만듦. min은 최솟값, max는 최댓값이며 step은 증감할 숫자를
+                    step은 따로 설정하지 않으면 1씩 증감함.
+        9. range : 슬라이드 막대를 이용해 범위를 지정할 수 있음. 속성값으로 min, max, value
+                   값을 지정할 수 있음.
+        10, radio : 짧은 항목에 대해서 1가지 선택이 필요할때 사용. radio필드에서는 name의 속성
+                    값을 동일하게 작성해야 같은 그룹으로 인식함. checked속성으로 미리 선택값을 
+                    지정할 수 있음
+        11. checkbox : 사용자에게 짧은 항목에 대해 여러가지의 선택을 받고자 할 경우 사용함. 
+        12. date : 생년월일과 같이 년/월/일에 대한 정보를 달력을 통해 선택할 수 있음.
+            - month : 월/연도를 선택할 수 있음.
+            - week : 주/연도를 선택할 수 있음.
+        13. time : 시간을 지정할때 사용. 속성값으로 min, max, value값을 사용할 수 있음.
+            - datetime : 날짜와 시간을 함께 지정.
+            - datetime-local : 날짜와 시간을 함께 지정.
+        14. submit(제출), reset(초기화) : 버튼형태로 표시되며 value속성값으로 버튼이름을 
+                                       바꿀 수 있음. submit버튼을 누르면 form태그의
+                                       action 경로로 데이터가 전송되며 reset을 누르면
+                                       작성한 내용이 모두 초기화된다.
+        15. select : 사용자가 여러 데이터중에서 하나를 선택하거나 다중으로 선택할때 사용. 데이터
+                     항목은 option태그를 지정해서 나열할 수 있고 option태그에 selected속성을
+                     이용하면 기본으로 보여질 항목을 먼저 선택하여 보여줄 수 있음.
+                     select태그에 mutiple속성을 적용하면 항목들을 펼쳐 볼 수 있고 ctrl키를 누른
+                     채 다른 옵션을 선택하면 다중선택할 수 있음.
+        16. textarea : 긴 글을 입력받고자 할 때 사용하는 태그. 이메일양식에서 메일 내용을 입력받거나
+                       이력서, 자소서 등 여러곳에 활용되는 태그.
+                       속성값으로는 다른 폼요소와 구별할 수 있는 name속성과 텍스트 영역의 넓이를 문자
+                       단위로 지정할 수 있는 cols와 줄 단위로 지정할 수 있는 rows가 있음.
+        17. button : type속성을 이용해 버튼의 용도를 정할 수 있음. 타입 속성값으로는 submit, reset,
+                     button이 있으며 button은 기본값이고 속성값을 지정하지 않은것과 같음. 화면 낭독기에서
+                     해당 태그를 만나면 '이 부분에는 버튼이 있다는 것'을 인식하고 정확하게 전달할 수 있음 
+                     button태그는 뒤에 닫는 태그가 있는 일반 태그로 내용을 포함하기 때문에 아이콘을 추가할
+                     수 있고 css를 이용해 원하는 형태로 바꿀 수 있음.
+        
+        input태그에 활용할 수 있는 속성들*******
+        ====================================
+        1. value : 입력 필드에 대한 초기값을 지정할때 사용.
+        2. readonly : 입력 필드가 읽기 전용임을 지정함.(사용자가 수정할 수 없음)
+        3. disabled : 입력필드가 사용 불가임을 지정함. 사용자가 사용할 수 없고, 클릭할 수 없으며
+                      전송될때 제출되지 않음. 
+        4. size : 입력필드의 크기(문자)를 지정함.
+        5. maxlength : 입력필드의 최대 허용길이를 지정함.
+        6. autocomplete : 자동완성기능. 속성값을 on으로 하면 자동완성 기능을 지원하고, off로 
+                          지정하면 특정 해당 태그는 자동완성기능을 끌 수 있음.
+                          사용할 수 있는input태그로는 text, search, url, email, tel, 
+                          range, datepickers, color에 사용할 수 있음.
+        7. novalidate : form태그에 사용하는 속성으로 제출시 유효성 검사를 하지 않도록 지정함.
+        8. autofocus : 페이지가 로드될 때 자동으로 해당 input요소에 초점을 맞춤.
+        9. placeholder : 입력필드에 기대되는 값을 설명해주는 힌트를 지정함.
+                         쓸 수 있는 태그로는 text, search, url, tel, email, password
+        10. required : 필수속성. 폼을 제출하기 전에 입력필드가 작성되어야만 함을 지정함.
+    -->
+     <form action="#" method="post">
+         <input type="text">텍스트필드**<br>
+         <input type="password">비밀번호**<br>
+         <input type="search">검색창**<br>
+         <input type="email">이메일**<br>
+         <input type="number" min="1" max="100" step="5">숫자**<br>
+         <fieldset>
+             <legend>성별-라디오**</legend>
+             <input type="radio" name="gender">남성
+             <input type="radio" name="gender" checked>여성
+         </fieldset>
+         <fieldset>
+            <legend>취미-체크박스**</legend>
+            <input type="checkbox">등산
+            <input type="checkbox" checked>산책
+            <input type="checkbox">음악감상
+            <input type="checkbox">그림그리기
+         </fieldset>
+         <input type="date">날짜(년/월/일)**<br>
+         <input type="month">날짜(년/월)**<br>
+         <input type="week">날짜(년/주)**<br>
+         <input type="time">시간**<br>
+         <input type="datetime">시간-datetime<br>
+         <input type="datetime-local">시간-datetime<br>
+         <input type="submit" value="작성 완료">submit<br>
+         <input type="reset" value="작성 취소">reset<br>
+         <select>
+             <option value="opt1">옵션1</option>
+             <option value="opt2">옵션2</option>
+             <option value="opt3" selected>옵션3</option>
+             <option value="opt4">옵션4</option>
+             <option value="opt5">옵션5</option>
+         </select>
+         <br>
+         <textarea name="" cols="50" rows="5"></textarea><br>
+         <button type="submit">보내기</button>
+         <button type="reset">취소</button>
+         <button type="button">기능없는 버튼</button><br>
+         <!-- 모바일용 -->
+         <input type="tel">전화번호**<br>
+         <!-- 잘 안쓰이는 type들 -->
+          <input type="url">url주소<br>
+          <input type="range" min="1" max="5" value="1">범위바<br>
+          <input type="color">색상<br>
+     </form>
+</body>
+</html>

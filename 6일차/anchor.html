@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하이퍼링크 태그</title>
+</head>
+<body>
+  <!-- 
+    하이퍼링크
+    =========================
+    모든 웹페이지를 이어주는 일종의 주소. 클릭하면 어디론가 화면이 넘어가는 모든 것.
+
+    <a> : 링크를 연결해주는 태그
+    ===========================
+    [기본형]
+    <a href="이동할 페이지나 url" 속성>글자 혹은 이미지</a>
+    - 속성
+      1. target : 페이지가 열리는 방식
+      - target="_self" : 링크를 클릭했을때 일반적으로 현재창에서 페이지가 이동하는 방식.
+                         기본값이며 target속성을 지정하지 않은것과 같음.
+      - target="_blank" : *** 새탭 열기. 비교적 활용도가 높음. 
+      - target="_parent" : 프레임으로 나눠진 페이지 전체를 부모 프레임으로 페이지가
+                           이동하는 방식. 현재는 잘 쓰이지 않음.
+      2. title : _blank를 지정했을 경우 꼭 지정해야되는 속성. 링크위로 마우스를 올리면
+      말풍선 형태로 링크에 대한 설명이 나타남.
+   -->
+   <!-- 링크 target값의 종류 -->
+   <p>
+    <a href="https://naver.com">네이버(none)</a>
+  </p>
+  <p>
+    <!-- 현재 탭에서 열기 -->
+    <a href="https://www.daum.net" target="_self">다음(_self)</a>
+  <p>
+    <!-- 새 탭으로 열기 -->
+    <a href="https://google.com" target="_blank">구글(_blank)</a>
+  </p>
+  <p>
+    <a href="" target="" title=""></a>
+  </p>
+</body>
+</html>

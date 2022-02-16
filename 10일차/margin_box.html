@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중첩박스</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner{
+      width: 740px;
+      height: 120px;
+      float:left;
+      background-color: black;
+      border: 2px solid red;
+    }
+    .login{
+      width: 333px;
+      height: 120px;
+      float: left;
+      background-color: black;
+      margin-left: 27px;
+      border: 2px solid red;
+    }
+    .main{
+      width: 1100px;
+      height: 120px;
+      background-color: red;
+      margin: 50px auto;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    중첩박스
+    =======================
+    웹사이트는 박스와 박스가 서로 겹쳐져 쌓여있는 구조로 이루어져 있음.
+    이때 박스안에 박스가 들어있는 구조를 '중첩박스'라고 부름
+    또한 중첩박스들은 화면의 중앙으로 보통 정렬되어있는데
+    이때 margin을 이용해 가운데로 보낼 수 있음.
+
+    여러 개의 자식박스를 화면의 중앙으로 보내기 위해서는 반드시'부모박스'가 필요함.
+    이 해당하는 부모박스에 margin : 0 auto가 적용되면 부모박스는 브라우저의
+    가운데로 항상 위치하게 됨.
+
+    margin: 0 auto를 오류없이 출력하기 위해서는 반드시 부모박스의
+    넓이값이 정해져 있어야 함
+   -->
+   <div class="main"> 
+   <div class="banner">배너 영역</div>
+   <div class="login">로그인</div>
+  </div>
+</body>
+</html>

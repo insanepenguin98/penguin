@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형 속성 실습</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #graph{
+            width: 700px;
+            overflow: hidden;
+            border: 2px solid #eee;
+            margin: 30px;
+        }
+        .box{
+            width: 30px;
+            height: 50px;
+            position: relative;
+            margin: 10px;
+            background-color: tomato;
+            transition-duration: 3s;/*3초 동안 움직임*/
+        }
+        /* #graph:hover div{
+            width: 600px;
+        } */
+        #graph:hover .box:nth-child(1){
+            transition-delay: 0s;/*지연값 없음*/
+            transition-timing-function: linear;
+            width: 100px;
+            background-color: red;
+        }
+        #graph:hover .box:nth-child(2){
+            transition-delay: 1s;/*graph에 마우스가 오버되면 1초후 재생*/
+            transition-timing-function: ease;
+            width: 500px;
+            background-color: orange;
+        }
+        #graph:hover .box:nth-child(3){
+            transition-delay: 2s;/*graph에 마우스가 오버되면 2초후 재생*/
+            transition-timing-function: ease-in;
+            width: 300px;
+            background-color: yellow;
+        }
+        #graph:hover .box:nth-child(4){
+            transition-delay: 3s;/*graph에 마우스가 오버되면 3초후 재생*/
+            transition-timing-function: ease-in-out;
+            width: 400px;
+            background-color: green;
+        }
+        #graph:hover .box:nth-child(5){
+            transition-delay: 4s;/*graph에 마우스가 오버되면 4초후 재생*/
+            transition-timing-function: ease-out;
+            width: 650px;
+            background-color: blue
+        }
+        #graph:hover .box{
+            transition-property: background-color, width;
+            transition-duration: 0.7s, 1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        transition-timing-function
+        ===================================
+        수치 변형 함수라고 부르며 정해진 속도값을 적용할 수 있음.
+        
+        [속성값]
+        1. linear : 시작부터 끝까지 같은 속도로 트랜지션을 진행함
+        2. ease : 처음에는 천천히 시작하여 점점 빨라지다가 마지막엔 천천히 끝냄. 기본값
+        3. ease-in : 속도의 시작을 느리게 시작함
+        4. ease-in-out : 느리게 시작하고 느리게 끝냄
+        5. ease-out : 속도를 느리게 끝냄
+
+        transition-property
+        ===============================
+        애니메이션을 만들다 보면 특정 스타일 속성에만 
+        애니메이션을 적용하거나, 각각의 스타일 속성에 다른 형태의
+        애니메이션을 적용하고 싶을때 사용하는 속성.
+        변형하고자 하는 스타일에 변화되는 시간을 각각 다르게 지정
+        하고자 할때 사용하는 속성.
+    
+    -->
+    <div id="graph">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

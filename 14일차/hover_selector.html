@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응선택자</title>
+    <style>
+        .hover1:hover{ /*class hover1에 마우스를 올리면 반응*/
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        h2:active{/* h2를 클릭하면 반응 */
+            background-color: salmon;
+            color: seashell;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: slategray;
+        }
+        div:hover{ /*div 마우스를 올리면 반응*/
+            width: 200px;
+            height: 200px;
+            background-color: steelblue;
+        }
+        div:active{/*div 클릭하면 반응*/
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        반응선택자**
+        ==================
+        사용자의 반응으로 생성되는 특정한 상태를 선택하는 선택자.
+        마우스를 특정 태그에 올리거나 클릭했을때 상태를 뜻함
+        [기본형]
+        1. :active - 사용자가 마우스로 클릭한 요소를 선택함.
+        2. :hover*** - 사용자의 마우스가 위치한 요소를 선택함.
+     -->
+     <p class="hover1">
+        안녕하세요
+     </p>
+     <h2>
+         제목2
+     </h2>
+     <div></div>
+</body>
+</html>

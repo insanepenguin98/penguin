@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표를 만드는 태그</title>
+    <style>
+        th, td{
+            border: 2px solid black;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        표를 만드는 table 태그
+        ========================
+        table태그는 웹 초창기에 사이트의 구조를 잡는 주요 태그로 활용되다가 현재에는 공지사항이나
+        리뷰, FAQ같은 글을 작성하는 페이지에 주로 사용됨.
+        그리고 백앤드 개발자들과 협업이 가장 활발하게 이루어지는 페이지 중 하나.
+        tabla태그는 block속성을 가지고 있음.
+
+        [기본형]
+        <tr>은 한 줄이며 <td>는 줄안에 나열되는 칸을 의미함
+        <table>            => 표 전체
+            <tr>           => 행(row)
+                <td></td>  => 열(column)
+            <tr>        
+        </table>
+
+        표의 제목을 나타내는 태그
+        =========================
+        표의 제목을 나타내는 태그로는 크게 3가지 종류가 있음.
+        표 전체의 제목을 붙이는 <caption>, <figcaption>과
+        표 안에서 각 셀의 내용에 대한 제목을 붙여주는 <th>가 있음.
+            
+        - <th> : 글자가 자동으로 굵게 표시되며 셀 중앙에 표시됨.
+        - <caption> : <table>태그 바로 아래에 출력하여 사용하며, 출력 시 표의 위쪽 중앙에 표현됨.
+        - <figcaption> : <table>태그 바깥쪽 위나 아래에 출력하여 사용할 수 있고, 글자가 표의 왼쪽으로 정렬됨
+     -->
+     <!-- 2행 2열 표 -->
+     <figcaption>표의 제목2</figcaption>
+     <table>
+         <caption>표의 제목</caption>
+         <!-- 1행(row) -->
+         <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+         </tr>
+         <!-- 2행(row) -->
+        <tr>
+             <!-- 2열(column) -->
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+        </tr>
+        <!-- 3행(row) -->
+        <tr>
+            <!-- 3열(column) -->
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+        </tr>
+     </table>
+     <figcaption>표의 제목2</figcaption>
+</body>
+</html>

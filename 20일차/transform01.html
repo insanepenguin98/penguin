@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형속성 실습</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            color: white;
+            line-height: 100px;
+            font-size: 20px;
+        }
+        .translate{
+            background-color: rgb(243, 196, 134);
+            transform: translate(150px, 200px);
+            transform: translateX(100px);
+            transform: translateY(100px);
+        }
+        .scale{
+            background-color: aquamarine;
+            margin-left: 150px;
+            transform: scale(1.5, 1.5); 
+            transform: scaleX(1.5);
+            transform: scaleY(1.5);
+        }
+        .skew{
+            background-color: aqua;
+            margin: 100px;
+            transform: skew(45deg, 150deg);
+            transform: skewX(50deg);
+            transform: skewY(50deg);
+        }
+        .rotate{
+            background-color: bisque;
+            margin: 100px;
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="translate">translate</div>
+    <div class="scale">scale</div>
+    <!-- scale값은 1이 기본값이며 1보다 크면 확대, 1보다 작으면 축소됨 -->
+    <div class="skew">skew</div>
+    <div class="rotate">rotate</div>
+
+</body>
+</html>

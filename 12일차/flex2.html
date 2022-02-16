@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 속성</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{/*부모박스*/
+            width: 1000px;
+            /* height: 800px; */
+            background-color: lemonchiffon;
+            margin: 50px auto;/*브라우저 가운데로*/
+            display: flex;
+            /* 나열방향 속성 */
+            /* flex-direction: row;
+            flex-direction: row-reverse; */
+            /* flex-direction: column;
+            flex-direction: column-reverse;
+            justify-content: space-between;  */
+           
+            /* 감싸기 속성 */
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+            /* 나열+감싸기 속성 */
+            /* flex-flow: row wrap; */
+            /* 컨텐츠 세로 정렬 속성 */
+            /* align-content: flex-start; */
+            /* align-content: flex-end; */
+            /* align-content: center; */
+            /* align-content: space-between; */
+            /* align-content: space-around;
+            align-content: space-evenly; */
+            align-content: stretch;
+        }
+        /* 자식박스 */
+        .container div{
+            width: 150px;
+            height: 150px;
+        }
+        .box1{
+            background-color: lightcoral;
+        }
+        .box2{
+            background-color: lightsalmon;
+        }
+        .box3{
+            background-color: lightseagreen;
+        }
+        .box4{
+            background-color: rgb(194, 82, 238);
+        }
+        .box5{
+            background-color: rgb(83, 163, 238);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        flex-direction : 나열방향 속성
+        ===============================
+        1. row : 요소들을 텍스트의 방향과 동일하게 정렬함.
+        2. row-reverse : 요소들을 텍스트의 반대 방향으로 정렬함.
+        3. column : 요소들을 위에서 아래로 정렬함. 
+        4. column-reverse : 요소들을 아래에서 위로 정렬함.
+        => row-reverse, column-reverse를 사용하면 요소들의 순서도 바뀜
+        => flex의 방향이 column일 경우 justify-content의 방향이 세로로 바뀌고
+           row일경우 align-items의 방향이 가로로 바뀜.
+
+        flex-wrap : 요소들 감싸기 속성
+        ==============================
+        자식요소의 너비높이를 유지한 채 정렬할것인가를 뜻하는 속성.
+        자식요소들의 너비의 합이 부모박스의 전체 가로 너비보다 넓을때 사용하는 속성.
+        1. nowrap : 기본값, 자식요소의 크기와는 상관 없이 모든 요소들을 한 줄에 정렬함.
+        2. wrap : 자식요소들을 여러 줄에 걸쳐 정렬함.
+        3. wrap-reverse : 자식요소들을 여러 줄에 걸쳐 반대로 정렬함.
+
+        flex-flow : 나열방향 + 감싸기 속성
+        =================================
+        flex-wrap과 flex-direction의 조합은 많이 사용되기 때문에 flex-flow로 한 번에
+        적어줄 수 있음. 속성값은 위에 있는 속성값을 모두 사용함.
+
+        align-content : 컨텐츠 세로 정렬 속성
+        ==================================
+        flex된 컨테이너 안에 자식들이 매우 많을 경우, 그리고 이 자식들에게 wrap으로 
+        여러 줄에 걸쳐 형성되어 있을때 사용하는 속성. 이 때 한 줄을 하나의 content로 봄.
+        1. flex-start : 여러 줄들을 컨테이너의 꼭대기에 정렬함.
+        2. flex-end : 여러 줄들을 컨테이너의 바닥에 정렬함.
+        3. center : 여러 줄들을 컨테이너의 세로 가운데에 정렬함.
+        4. space-between : 여러 줄들 사이에 동일한 간격을 둠.
+        5. space-around : 여러 줄들 주위에 동일한 간격을 둠.
+        6. space-evenly : 여러 줄들에 모두 동일한 간격을 둠.
+        7. stretch : 여러 줄들을 컨테이너에 맞게 늘림. 
+
+        
+     -->
+     <div class="container">
+         <div class="box1"></div>
+         <div class="box2"></div>
+         <div class="box3"></div>
+         <div class="box4"></div>
+         <div class="box5"></div>
+         <div class="box1"></div>
+         <div class="box2"></div>
+         <div class="box3"></div>
+         <div class="box4"></div>
+         <div class="box5"></div>
+         <div class="box1"></div>
+         <div class="box2"></div>
+         <div class="box3"></div>
+         <div class="box4"></div>
+         <div class="box5"></div>
+     </div>
+</body>
+</html>

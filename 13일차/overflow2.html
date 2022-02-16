@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow:scroll</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 가로, 세로 스크롤바를 모두 표시 */
+        .scrollbox1{
+            width: 150px;
+            height: 200px;
+            border: 2px solid black;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 10px;
+            overflow: scroll;
+        }
+        /* 가로 스크롤 */
+        .scrollbox2{
+            width: 150px;
+            height: 200px;
+            border: 2px solid black;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 30px;
+            overflow-x: scroll;
+            overflow-y: hidden; 
+            /*세로 스크롤을 숨겨줘야 세로스크롤이 나타나지 않음.*/
+        }
+        /* 세로 스크롤 */
+        .scrollbox3{
+            width: 150px;
+            height: 200px;
+            border: 2px solid black;
+            float: left;
+            box-sizing: border-box;
+            margin-left: 10px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            /*가로 스크롤을 숨겨줘야 세로스크롤이 나타나지 않음.*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        overflow:scroll
+        =====================
+        웹페이지를 비롯한 박스 배너에 스크롤을 만들고자 할때 scroll속성을 사용함.
+        scroll값은 기본값이 가로세로가 모두 출력되는 속성이기 때문에
+        특정 스크롤만 출력하고 싶은경우 숨기고 싶은 해당 축 스크롤을 반드시
+        hidden값으로 숨겨주어야 함.
+        [하위 속성값]
+        1. overflow : hidden or scroll
+           - 영역을 벗어나는 가로, 세로 부분을 스크롤 바로 나타나게 하거나 숨김.
+        2. overflow-x : hidden or scroll
+           - 가로 스크롤바를 숨기거나 나타나게함.
+        3. overflow-y : hidden or scroll
+           - 세로 스크롤바를 숨기거나 나타나게 함.
+    -->
+
+    <!-- 스크롤바를 가로 세로 모두 표시 -->
+    <div class="scrollbox1">
+        <h4>scroll-x,y</h4>
+        <p>
+            <img src="./img/penguin.jpg" alt="penguin">
+        </p>
+    </div>
+
+    <!-- 가로 스크롤바 나타내기 -->
+    <div class="scrollbox2">
+        <h4>scroll-x</h4>
+        <p>
+            <img src="./img/penguin.jpg" alt="penguin">
+        </p>
+    </div>
+    <!-- 가로 스크롤바 나타내기 -->
+    <div class="scrollbox3">
+        <h4>scroll-y</h4>
+        <p>
+            <img src="./img/penguin.jpg" alt="penguin">
+        </p>
+    </div>
+</body>
+</html>

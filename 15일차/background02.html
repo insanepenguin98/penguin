@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 사이즈</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url(./img/art.jpg);
+            /* backgrond 이미지 기본 속성은 바둑판 배열로 반복되는것이 기본 속성 */
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: no-repeat;
+            /* 배경반복여부 : 반복 안함 */
+            background-size: 100%;
+            /* 브라우저 가로 기분으로 100% 채움, 세로는 지정된 값이 없어 정비율로 조정됨 */
+            background-size: 50% 500px;
+            /* 속성값의 앞 자리는 가로 넓이, 뒷 자리는 세로 높이 */
+            height: 3000px;
+            /* 스크롤을 만들기 위해 물리적으로 적용된 높이값 */
+            background-attachment: fixed;
+            /* 스크롤과 상관 없이 현재 위치에 이미지를 고정함 */
+            background-position: center;
+            
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

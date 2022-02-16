@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소 선택자</title>
+    <style>
+        h2::before{
+            content: '하하';
+        }
+        p::after{
+            content: '호호';
+            display: block;
+            width: 500px;
+            height: 300px;
+            border-bottom: 5px solid lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <!-- 매우 잘 쓰임 중요함
+        가상요소 선택자
+        =========================
+        html 코드에는 존재하지 않는 구조 요소에 스타일을 부여할 수 있음
+        문서 내에는 보이지 않지만 미리 정의한 위치에 요소를 삽입 할 수 있음.
+        [기본형]
+        1. ::before - 특정 요소 앞에 삽입하며, 내용이 필요한 경우 content속성을 이용함.
+        2. ::after - 특정 요소 뒤에 삽입하며, 내용이 필요한 경우 content속성을 이용함.
+    -->
+    <h2>TITLE-1</h2>
+    <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+        Reprehenderit tempore eos at ullam atque voluptatum iure aspernatur in suscipit 
+        dolorem tempora esse necessitatibus debitis delectus perspiciatis, recusandae dolorum quod quia?</P>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리 실습</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 기본구조 */
+        #wrap{
+            width: 90%;
+            margin: 0 auto;
+            border: 4px solid cornflowerblue;
+            overflow: hidden;
+        }
+        #wrap div{
+            float: left;
+            height: 100px;
+        }
+        #wrap div:first-child{
+            background-color: lightcoral;
+        }
+        #wrap div:nth-child(2){
+            background-color: lightblue;
+        }
+        #wrap div:nth-child(3){
+            background-color: lightgoldenrodyellow;
+        }
+        #wrap div:nth-child(4){
+            background-color: lightpink;
+        }
+        #wrap div:last-child{
+            background-color: lightgreen;
+        }
+        /* 미디어쿼리 */
+        @media screen and (min-width: 320px){/*화면사이즈 320px부터*/
+            #wrap div{
+                width: 100%;
+            }
+        }
+        @media screen and (min-width: 769px){/*화면사이즈 769px부터*/
+            #wrap div{
+                width: 50%;
+            }
+            #wrap div:last-child{
+                width: 100%;
+            }
+        }
+        @media screen and (min-width: 1024px){/*화면사이즈 1024px부터*/
+            #wrap div{
+                width: 20%;
+            }
+            #wrap div:last-child{
+                width: 20%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>

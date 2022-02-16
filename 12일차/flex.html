@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 속성</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{/*부모박스*/
+            width: 1000px;
+            height: 800px;
+            background-color: lemonchiffon;
+            margin: 50px auto;/*브라우저 가운데로*/
+            display: flex;
+            /* 가로정렬속성 */
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly;;
+            justify-content: flex-start;
+
+            /* 세로정렬속성 */
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            align-items: baseline;
+            align-items: stretch;
+        }
+        /* 자식박스 */
+        .container div{
+            width: 150px;
+            height: 150px;
+        }
+        .box1{
+            background-color: lightcoral;
+        }
+        .box2{
+            background-color: lightsalmon;
+        }
+        .box3{
+            background-color: lightseagreen;
+        }
+        .box4{
+            background-color: rgb(194, 82, 238);
+        }
+        .box5{
+            background-color: rgb(83, 163, 238);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        display: flex;
+        =================
+        어플리케이션 형태의 페이지 또는 반응형 홈페이지에서 많이 쓰임.
+        유동 레이아웃 구현 시 많이 사용됨.
+        익스 10이상에서 구현됨. 익스 10,11버전에서도 가끔 버그가 발생할 수 있음.
+
+        ****************
+        display : flex속성은 반드시 부모박스(container)가 필요하고, 
+        부모박스에 적용해야 함.
+        자식이 여러 개 일때 사용하는 속성임.
+        부모박스에 flex를 적용하게 되면 자식박스가 가로로 정렬되는데 
+        이때 정렬속성과 함께 사용해야 함. 이 정렬 속성들도 반드시 부모박스에 적용되어야 함.
+        ****************
+
+        justify-content : 가로 정렬 속성
+        ==============================
+        1. flex-start : 자식요소들을 컨테이너의 왼쪽으로 정렬함. 기본값.
+        2. flex-end : 자식요소들을 컨테이너의 오른쪽으로 정렬함.
+        3. center : 자식요소들을 컨테이너의 가운데로 배치함.
+        4. space-between : 요소들간의 동일한 간격을 줌.
+        5. space-around : 요소들 양옆에 동일한 간격을 줌.
+        6. space-evenly : 요소들 사이에 동일한 간격을 줌.
+
+        align-items : 세로 정렬 속성
+        ================================
+        1. flex-start : 자식요소들을 컨테이너 꼭대기에 정렬함.
+        2. flex-end : 자식요소들을 컨테이너의 바닥으로 정렬함.
+        3. center : 자식요소들을 컨테이너의 높이의 중앙으로 정렬함.
+        4. baseline : 자식요소들을 컨테이너의 시작 위치에 정렬함.
+        5. stretch : 자식요소들을 컨테이너의 높이에 맞게 늘림.
+                     (자식박스에 높이가 없어야만 적용됨.)
+     -->
+     <div class="container">
+         <div class="box1"></div>
+         <div class="box2"></div>
+         <div class="box3"></div>
+         <div class="box4"></div>
+         <div class="box5"></div>
+     </div>
+</body>
+</html>

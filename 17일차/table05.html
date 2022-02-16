@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table실습</title>
+    <style>
+        td,th{
+            border: 2px solid black;
+            text-align: center
+        }
+        thead{background-color: lemonchiffon;}
+    </style>
+</head>
+<body>
+    <table>
+        <caption>2019학년도 1학기 일반과목 시간표</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">교시</th>
+                <th colspan="4">화요일</th>
+                <th colspan="4">토요일</th>
+            </tr>
+            <tr>
+                <!-- 총 9칸이어야 하지만 첫번째 th는 윗줄 '교사'에서 하나로 합쳐짐 -->
+                <!-- 화요일 -->
+                <th>시간</th>
+                <th>과목명[수강번호]</th>
+                <th>담당교수<br>(전공)</th>
+                <th>강의실</th>
+                <!-- 토요일 -->
+                <th>시간</th>
+                <th>과목명[수강번호]</th>
+                <th>담당교수<br>(전공)</th>
+                <th>강의실</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 1교시 줄 -->
+            <tr>
+                <th rowspan="2">1교시<br>(19:00)</th>
+                <!-- 화요일 -->
+                <td>19:00~<br>20:30</td>
+                <td>디지털포렌식</td>
+                <td>손태식</td>
+                <td>906</td>
+                <!-- 토요일 -->
+                <td>10:30~<br>12:00</td>
+                <td>C4I사례연구2</td>
+                <td>김수용</td>
+                <td>904</td>
+            </tr>
+            <tr>
+                <!-- 화요일 -->
+                <td>19:00~<br>21:30</td>
+                <td>IOT개론</td>
+                <td>고영배</td>
+                <td>905</td>
+                <!-- 토요일 -->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- 2교시 줄 -->
+            <tr>
+                <th rowspan="2">2교시<br>(20:30~)</th>
+                <!-- 화요일 -->
+                <td>20:30~<br>22:00</td>
+                <td>빅데이터</td>
+                <td>함경식</td>
+                <td>906</td>
+                <!-- 토요일 -->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <!-- 화요일 -->
+                <td>20:30~<br>22:00</td>
+                <td>지능형소프트웨어특강</td>
+                <td>임성열</td>
+                <td>907</td>
+                <!-- 토요일 -->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>  
+</body>
+</html>

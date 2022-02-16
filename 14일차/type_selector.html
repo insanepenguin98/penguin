@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형태구조선택자</title>
+    <style>
+        h1:first-of-type{/* h1중에 첫번째 태그 선택 */
+            color: purple;
+        }
+        h2:last-of-type{
+            color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        형태구조 선택자
+        =========================
+        구조선택자와 비슷하지만 태그 형태로 구분함.
+        부모 태그와 자식태그가 같을  경우 부모먼저 계산됨.
+        자식태그가 다를 경우 사용함
+        [기본형]
+        1. :first-of-type : 부모박스안의 형제관계중 첫번째 태그를 선택.
+        2. :last-of-type : 부모박스안의 형제관계중 마지막 태그를 선택.
+        3. :nth-of-type(수열) : 부모박스안의 형제관계중 수열번쨰 태그를 선택
+        4. :nth-last-of-type(수열) :  부모박스안의 형제관계중 뒤에서 수열번쨰 태그를 선택
+    -->
+    <div>
+        <h1>header-1</h1>
+        <h2>header-2</h2>
+        <h3>header-3</h3>
+        <h2>header-2</h2>
+        <h1>header-2</h1>
+
+    </div>
+</body>
+</html>

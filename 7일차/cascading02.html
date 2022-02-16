@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내부스타일시트</title>
+  <!-- css -->
+  <style>
+    *{
+      margin: 0; /* 바깥쪽 여백 */ 
+      padding: 0; /* 안쪽 여백 */
+    }
+    body{
+      background-color: coral;/* 배경색상 */
+      font-family: 'Impact', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+      /* 글꼴 : '폰트1' '폰트2' '폰트3' 폰트형식; 글꼴은 속성값을 여러개 쓸 수 있음. */
+      color: cornsilk;/* 글자생상. 
+                           HEX코드는 같은 알파벳이나 숫자가 6개 반복되면 3개씩 끊어쓸 수 있음*/
+      letter-spacing: 2px;/* 자간 */
+      line-height: 28px;/* 행간 */
+    }
+    h1{
+      /* h1만 글자 색상을 다시 바꿈. 폰트의 크기도 50px로 바꿈. */
+      color: crimson;
+      font-size: 50px;
+    }
+    h1{
+      /* h1의 글자색상을 또 바꿈. 하지만 폰트 크기는 재 정의하지 않았기 때문에
+         50px로 유지
+      */
+      color: darkgrey;
+    }
+    a{
+      text-decoration: none;/* 글자꾸밍 : 모두 없애기 */
+      color: darkgrey;/* 글자색상 */
+      line-height:15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    내부스타일시트
+    =================
+    내부 스타일 시트는 웹 문서 안에 사용할 스타일을 정리한 것을 뜻함.
+    head안에 style태그를 이용해 css를 작성하는 방식.
+  
+    전체 선택자
+    =================
+    웹문서 전체를 선택해주는 선택자. 초기화 작업시 사용하며 브라우저의 기본 여백을 
+    없앨때 사용함. 표기번은 *으로 표기함.
+    브라우저의 기본여백을 없애지 않으면 코드 작업 시 구조를 잡기 힘들기 때문에 반드시
+    맨 처음부터 없애주고 시작해야 함.
+
+    css의 특징
+    ==============
+    css는 속성이 나중에 쓰여진 속성이 먼저 적용되는 특징을 가지고 있음.
+    해당 태그에 속성이 적용되어 있을때 새 속성을 적용하면 나중에 쓴 새 속성이 먼저 적용됨.
+  -->
+  <h3>내부 스타일 시트</h3>
+  <h1>CASCADING STYLE SHEETS</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="#">Necessitatibus minima maiores, placeat perferendis</a><br>
+    debitis, deserunt enim perspiciatis fugiat officiis animi, assumenda aperiam blanditiis? Officia ipsa possimus<br>
+    veniam assumenda, iste corrupti!</p>
+</body>
+
+</html>

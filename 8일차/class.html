@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 선택자</title>
+    <!-- css -->
+    <style>
+        /* 브라우저 기본여백 없애기 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .color1{ /* h2 */
+            color: slateblue; /* 글자색상 */
+        }
+        p{
+            color: steelblue;
+        }
+        .color2{ /* 첫번째 p태그 */
+            color: lightcoral;
+            background-color: lemonchiffon;/* 배경색 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        클래스 선택자
+        ======================
+        특정 부분에 스타일을 적용할때 사용함. 클래스는 해당 태그에 이름을 붙이는 역할.
+        해당 이름을 가진 태그에 특별한 속성을 적용하는 방식.
+        이때 클래스의 이름은 기억하기 쉽고 구분하기 쉬운 의미가 통하는 이름으로 지어주어야
+        하며 이름에는 숫자가 먼저 등장하지 않고 한글은 사용할 수 없음. 태그나 속성의 이름과
+        같지 않아야 함(개발자간의 약속). class 이름은 다른 태그에도 여러 번 사용할 수 있음.
+
+        [기본형]
+        - html
+        <태그 class="클래스명"></태그>
+        - css
+        .클래스명{ 속성:값; }
+     -->
+     <h1>웹 디자인</h1>
+     <h2 class="color1">smartphone web design</h2>
+     <p class="color2">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+         <span class="color1">Doloribus</span>, placeat repellendus, reprehenderit magnam nobis 
+         culpa delectus necessitatibus velit cum dignissimos ullam doloremque 
+         illo modi voluptatem reiciendis accusamus provident magni iste.
+     </p>
+     <p>
+        <span class="color2">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. 
+        Doloribus, placeat repellendus, reprehenderit magnam nobis 
+        culpa delectus necessitatibus velit cum dignissimos ullam doloremque 
+        illo modi voluptatem reiciendis accusamus provident magni iste.
+    </p>
+</body>
+</html>

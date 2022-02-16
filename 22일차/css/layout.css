@@ -1,0 +1,159 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+    letter-spacing: -1px;
+}
+/* 고정그리드(pc) */
+#wrap{
+    width: 100%;
+    height: auto;
+}
+section{
+    width: 1420px;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 120px 60px;
+}
+/* title box */
+.tit_box{
+    float: left;
+    width: 35%;
+    overflow: hidden;
+    padding: 35px 0;
+}
+.tit_box h5{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.tit_box h2{
+    font-size: 60px;
+    font-weight: 900;
+}
+.tit_box h2:last-of-type{
+    margin-bottom: 20px;
+}
+.tit_box h2 > span.light{
+    font-weight: 300;
+}
+.tit_box p{
+    font-size: 25px;
+    font-weight: 300;
+}
+/* 버튼박스 */
+.btn_box{
+    float: right;
+    width: 60%;
+    overflow: hidden;
+}
+.btn_box > div{
+    width: 48%;
+    height: 210px;
+    float: left;
+    border-radius: 30px;
+    padding: 20px 70px;
+    box-sizing: border-box;
+    line-height: 180px;
+    font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.btn_box > .sky{
+    background-color: rgb(102, 192, 228);
+}
+.btn_box > .green{
+    background-color: rgb(0, 128, 107);
+    float: right;
+}
+.btn_box > .y_green{
+    background-color: yellowgreen;
+    margin-bottom: 0px;
+}
+.btn_box > .purple{
+    background-color: #874fa7;
+    margin-bottom: 0px;
+    float: right;
+}
+
+/* 미디어쿼리- LT, TB */
+@media screen and (max-width: 1556px){ /*화면 1556px까지*/
+    section{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1400px){ /*화면 1400px까지*/
+    .btn_box > div{
+        padding: 20px 50px;
+        font-size: 28px;
+    }
+}
+/* 미디어쿼리- TB */
+@media screen and (max-width: 1210px){ /* 화면 1210px 까지 */
+    .btn_box{
+        width: 100%;
+        clear: both;
+        margin: 0 auto;
+    }
+    .tit_box{
+        width: 100%;
+        clear: both;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .tit_box h2{
+        float: left;
+        font-size: 4.9vw;
+    }
+    .tit_box .tit1{
+        width: 66.2vw;  
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .tit_box p{
+        float: left;
+        font-size: 1.65vw;
+    }
+
+    .tit_box .tit2{
+        width: 33.5vw;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    
+    /* 미디어쿼리-MB */
+    @media screen and (max-width: 700px){ /* 화면사이즈 700까지 */
+        .tit_box h5{
+            font-size: 25px;
+        }
+        .tit_box .tit1{
+            width: 80vw;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .tit1 h2{
+            font-size: 6vw;
+        }
+        
+        .tit_box .tit2{
+            width: 61vw;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .tit2 p{
+            font-size: 3vw;
+        }
+        .btn_box div{
+            font-size: 3.5vw;
+            padding: 20px 25px;
+        }
+    }
+}

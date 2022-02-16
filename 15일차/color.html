@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 색상 표현하기</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100%;
+            height: 100px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: #fff;
+        }
+        /* red색상 적용 */
+        #word{
+            background-color: red;
+        }
+        #hex{
+            background-color: #ff0000;
+        }
+        #rgb{
+            background-color: rgb(255, 0, 0);
+        }
+        #hsl{
+            background-color: hsl(0, 100%, 50%);
+        }
+        #rgba{
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+        #hsla{
+            background-color: hsla(0, 100%, 50%, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        css3에서 사용되는 색상 표기 방식
+        ================================
+        1. #000fff : hex코드. 가장 많이 사용되는 단위.
+        2. red, blue... : 색상명
+        3. rgb(red,green,blue) : rgb색상단위. 최댓값은 255, 최솟값은 0
+        4. rgba(red,green,blue,alpha) : rgba색상단위. a는 alpha값을 의미함.
+           * alpha값은 0~1까지 표기할 수 있고 1 = 100% 불투명한 상태. 0.5 = 50% 불투명
+        5. hsl(hue,saturation,lightness) : hsl색상단위. %로 표기함.
+        6. hsla(hue,saturation,lightness,alpha) : hsla색상단위. 
+     -->
+     <div id="word">색상명</div>
+     <div id="hex">hex코드. #을 붙인 십진수</div>
+     <div id="rgb">rgb(red,green,blue)</div>
+     <div id="hsl">hsl(hue,saturation,lightness)</div>
+     <div id="rgba">rgba(red,green,blue,alpha)</div>
+     <div id="hsla">hsla(hue,saturation,lightness,alpha)</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* 언어 캐릭터셋 */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: tomato  !important;
+}
+p{
+    color: seagreen;
+    font-weight: bold;
+    /* 글자두께 : 두껍게 */
+}
+h1{
+    color: seagreen;
+}
+h1{
+    color: slateblue;
+}
+
+/* 스타일상속 */
+ul{
+    font-family: '돋움';
+    color: salmon;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float실습</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      width: 300px;
+      height: 300px;
+      border: 2px solid black;
+    }
+    .box1{
+      float: left;
+    }
+    .box2{
+      float: left;
+    }
+    .box3{
+      float: left;
+    }
+    .box4{
+      clear: both; /*float속성을 해제*/
+      float: left;/* 2번째줄부터 왼쪽으로 정렬 */
+    }
+    .box5{
+      float:left;
+    }
+    .box6{
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    clear 속성
+    ================
+    float의 치고올라오는 이 속성을 끝내기 위한 속성. (= 배치를 끝내기 위해)
+
+    [속성값]
+    1. left : 왼쪽으로 배치된 float속성을 해제함.
+    2. right : 오른쪽으로 배치된 float속성을 해제함.
+    3. both**** : 양옆의 float속성을 모두 해제함.
+   -->
+  <div class="box1">01</div>
+  <div class="box2">02</div>
+  <div class="box3">03</div>
+  <div class="box4">04</div>
+  <div class="box5">05</div>
+  <div class="box6">06</div>
+</body>
+</html>

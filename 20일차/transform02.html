@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3차원 변환</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+            font-size: 20px;
+        }
+        .translate3d{
+            background-color: lightblue;
+            transform: translate3d(100px, 120px, 50px);
+        }
+        .scale3d{
+            background-color: lightcoral;
+            margin: 150px 100px;
+            transform: scale3d(1.5, 2, 5);
+        }
+        .rotate3d{
+            background-color: lightseagreen;
+            transform: rotate3d(2. 3. 5, 45deg);
+            /* x축으로 2, y축으로 3, z축으로 5만큼의 방향성과 백터 45도 회전 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        3차원 변환속성값의 종류
+        ==========================
+        1. translate3d(X, Y, Z) : 특정 크기만큼 이동
+            - translate3X : x축으로 특정 크기만큼 이동
+            - translate3Y : y축으로 특정 크기만큼 이동
+            - translate3Z : z축으로 특정 크기만큼 이동
+
+        2. scale3d(X, Y, Z) : 특정 크기만큼 확대/축소함
+            - scale3d도 각 축을 따로 쓸 수 있음.
+            - 1이 기본값이며 1보다 작으면 축소, 1보다 크면 확대
+        3. rotate3d(X, Y, Z) : 특정 크기만큼 회전
+            - rotate3d도 각 축을 따로 쓸 수 있음.
+            - 단위는 각도를 뜻하는 deg를 사용함.
+     -->
+     <div class="translate3d">translate3d</div>
+     <div class="scale3d">scale3d</div>
+     <div class="rotate3d">rotate3d</div>
+</body>
+</html>

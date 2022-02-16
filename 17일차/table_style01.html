@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다양한 표 스타일 적용하기</title>
+    <style>
+        table{
+            border: 2px solid black;
+            border-collapse: collapse;
+            /* border-spacing: 40px 20px;테두리와 셀 사이 간격: 가로간격px 세로간격px */
+            /* empty-cells: hide; */
+            width: 400px;
+            table-layout: fixed;
+            word-break: break-all;
+        }
+        td{
+            border: 1px dotted black;
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+            height: 100px;
+        }
+        /* 셀 수직 정렬 */
+        .cell1{
+            vertical-align: top;
+        }
+        .cell2{
+            vertical-align: middle;
+        }
+        .cell3{
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        border-collapse속성
+        ======================
+        border-colspan손성을 지정하면 <table>과 <td>사이에 떨어진 여백을 하나의 선으로 합칠 수 있음.
+        table에 적용하는 속성
+        [속성값]
+        1. collapse : 테두리를 하나로 합침
+        2. separate : 기본값으로 테두리를 따로 표현함
+
+        border-spacing
+        ============================
+        <table>과 <td>사이에 떨어진 여백의 간격을 지정하는 속성으로 boder-collapse속성이 적용되면
+        함께 적용할 수 없음.
+
+        empty-cells속성
+        =============================
+        table태그에서 내용이 없는 빈 칸들의 표시여부를 지정함.
+        table에 적용하는 속성
+        [속성값]
+        1. show : 빈 셀 주위에 테두리를 표시하며 빈 셀들을 나타냄. 기본값.
+        2. hide : 빈 셀의 테두리를 숨김.
+
+        table-layout속성
+        ===========================
+        컨텐츠에 맞게 셀의 넓이를 지정함. 셀의 넓이값을 지정하면 해당 크기에 맞게 화면에 맞춰 표시됨.
+        영문일 경우 여백 없이 길게 입력될 경우 셀의 너비값이 무시되고 영문 내용은 한 줄로 표현됨.
+        이떄 이 속성을 사용함.
+        [속성값]
+        1. fixed : 셀 넓이를 고정하며 셀의 내용에 따라 셀의 넓이가 달라지지 않음.
+        2. auto : 기본값이며 셀의 내용에 따라 넓이가 달라짐
+
+        word-break속성
+        ==========================
+        table-layout과 함께 사용되며 셀의 너비가 정해져 있고 그안에 내용이 너무 길 경우
+        내용이 칸을 벗어나지 않도록 해주는 속성
+        [속성값]
+        1. break-all : 셀이 칸을 벗어나지 않도록 함.
+        2. keep-all : 기본값으로 내용이 길어지면 벗어남.
+
+        text-align, vertical-align 속성
+        ===================================
+        text-align 속성은 칸 안에서 수평으로 글자를 정렬할때 사용함
+        vertical-align 속성은 칸 안에서 수직으로 글자를 정렬할떄 사용함. 테이블속성에서만 사용 가능.
+        [기본값]
+        1. baseline : 셀의 기준선에 내용의 기준선을 맞춤
+        2. top : 패딩의 가장 위쪽 가장자리에 내용의 윗부분을 맞춤
+        3. middle : 패딩박스에 중앙에 내용을 맞춤
+        4. bottom : 패딩의 가장 아래쪽 가장자리에 내용의 아랫부분을 맞춤
+     -->
+     <table>
+         <caption>표 스타일</caption>
+         <tr>
+             <td>시네마 천국: 시네마 천국은 옛날 영화를 소개해주는 프로그램으로 어쩌구</td>
+             <td>벤허</td>
+         </tr>
+         <tr>
+             <td>11:00 ~ 14:30</td>
+             <td>16:00 ~ 19:00</td>
+         </tr>
+     </table>
+     <table>
+        <caption>샐 정렬</caption>
+        <tr>
+            <td class="cell1">top</td>
+            <td class="cell2">middle</td>
+            <td class="cell3">bottom</td>
+        </tr>
+     </table>
+</body>
+</html>

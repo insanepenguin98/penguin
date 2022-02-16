@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>칸 합치기 속성</title>
+    <style>
+        table{
+            margin-bottom: 50px;
+        }
+        th,td{
+            border: 2px solid black
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        표의 칸을 합치는 속성
+        =====================
+        table태그는 칸을 합칠수는 있지만 나눌 수 있는 속성은 없음.
+        그렇게 때문에 표 안에서 여러 열들을 가로나 세로로 나누고 싶을때에는
+        가장 많은 칸의 개수를 기준으로 table 구조를 잡아야함
+
+        [기본형]
+        1. <td colspan="숫자">
+           colspan = 표를 만든 후 가로 열(칸)을 합칠때 사용하는 '속성'.<td>나<th>에 사용함.
+                     colspan을 적용하면 쓰여진 숫자만큼 해당하는 칸 만큼 합쳐짐 
+        
+        2. <td rowspan="숫자">
+           rowspan = 표를 만든 후 세로 행(칸)을 합칠때 사용하는 '속성'.<td>나<th>에 사용함.
+                     rowspan을 적용하면 쓰여진 숫자만큼 해당하는 칸이 합쳐짐.
+     -->
+
+     <!-- colspan : 3행2열 -->
+     <table>
+         <caption>colspan</caption>
+        <tr>
+            <!-- 1행 -->
+            <th colspan="2">가로칸 합치기</th> <!-- colspan에 의해 2칸짜리가 됨. -->
+        </tr>
+        <tr>
+            <!-- 2행 -->
+            <td>2행1열</td>
+            <td>2행2열</td>
+        </tr>
+        <tr>
+            <!-- 3행 -->
+            <td>3행1열</td>
+            <td>3행2열</td>
+        </tr>
+     </table>
+
+     <!-- rowspan :3행 2열 -->
+     <table>
+         <caption>세로 칸 합치기</caption>
+        <tr>
+            <!-- 1행 -->
+            <th rowspan="3">세로칸합치기</th>
+            <th>세로칸합치기</th>
+        </tr>
+        <tr>
+            <!-- 2행 -->
+            
+            <td>2행2열</td>
+        </tr>
+        <tr>
+            <!-- 3행 -->
+           
+            <td>3헹2열</td>
+        </tr>
+     </table>
+     <!-- 4행 4열 표를 만들고 -->
+     <table>
+         <tr>
+             <td>1</td>
+             <td>2</td>
+             <td>3</td>
+             <td>4</td>
+         </tr>
+         <tr>
+            <td colspan="3">5</td>
+            <td>8</td>
+         </tr>
+         <tr>
+             <td>9</td>
+             <td rowspan="2">10</td>
+             <td>11</td>
+             <td rowspan="2">12</td>
+         </tr>
+         <tr>
+             <td>13</td>
+             <td>15</td>
+         </tr>
+     </table>
+</body>
+</html>

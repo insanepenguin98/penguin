@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포지션 실습</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 부모박스 */
+        .movie{
+            width: 700px;
+            height: 500px;
+            border: 2px solid black;
+            background-color: aliceblue;
+            position: relative;
+        }
+        /* 자식박스 */
+        button{
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            border-radius: 120px;
+            border: none;
+            font-size: 20px;
+            background-color: royalblue;
+            color: #fff;
+            position: absolute;
+        }
+        .prev{
+            left: 10px;
+            top: 50%;
+            margin-top: -60px;
+        }
+        .next{
+            right: 10px;
+            top: 50%;
+            margin-top: -60px;
+        }
+        .play{
+            left: 50%;
+            top: 50%;
+            margin-top: -60px;
+            margin-left: -60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 부모박스 | relative -->
+    <div class="movie">
+        <!-- 자식박스 | absolute -->
+        <button class="prev">PREV</button>
+        <button class="play">></button>
+        <button class="next">NEXT</button>
+    </div>
+</body>
+</html>

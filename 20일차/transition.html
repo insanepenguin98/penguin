@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변환속성</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background-color: antiquewhite;
+            transition-duration: 1s;/* 1초동안 변형 */
+        }
+        .box:hover{/*마우스오버*/
+            width: 400px;
+            height: 400px;
+        }
+        .box:active{/*클릭할때*/
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        transition속성
+        ==========================
+        css3에서 움직임을 구현하기 위한 기능은 애니메이션 속성과
+        변형 속성으로 나눠지며 transition속성을 이용하면 간단한 움직임을
+        부드럽게 제어할 수 있음.
+        transition속성은 반응선택자(:hover,active)가 사용되기 이전의
+        기본 선택자에 적용하는 속성.
+
+        트랜지션 속성은 아래 스타일 속성들과 함께 쓸 수 있음.
+        [스타일 속성]
+        1. 위치속성 : top, left, right, bottom
+        2. 크기속성 : width, height
+        3. 박스속성 : padding, margin
+        4. 테두리속성 : border-width, border-color, border-style
+        5. 색상속성 : color, background-color
+        6. 투명도속성 : opacity
+        7. 변환속성 : transform
+        
+        [변형속성의 속성값]
+        1. transition : 모든 transition속성을 한 번에 선언할때 사용.
+        2. transition-delay : 이벤트가 발생 후 몇 초 후에 재생할지 지정함.
+        3. transition-duration : 몇 초 동안 재생할지 지정함.
+        4. transition-property : 어떤 속성을 변형할지 지정함 .
+        5. transition-timing-function : 수치 변형 함수를 지정함.
+     -->
+     <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../웹퍼블리셔/9일차"
+		},
+		{
+			"path": "../../웹퍼블리셔/10일차"
+		},
+		{
+			"path": "../../웹퍼블리셔/test"
+		},
+		{
+			"path": "../../../../Users/sondongju/Downloads/11일차/google_test"
+		},
+		{
+			"path": "../../웹퍼블리셔/11일차"
+		},
+		{
+			"path": "../../웹퍼블리셔/project"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "project"
+	}
+}

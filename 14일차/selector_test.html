@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 실습</title>
+    <style>
+         input[type = checkbox]:checked + div {
+            /* checkbox인 input태그가 check가 되면 div */
+            height: 0;
+        }
+        div{
+            width: 650px;
+            height: 300px;
+            background-color: tan;
+            color: white;
+            /* height가 있으면 높이만큼만 보여짐 */
+            overflow: hidden;
+        }
+      
+    </style>
+</head>
+<body>
+    <!-- 
+        상태선택자와 동위선택자를 활용해 
+        체크박스가 체크되면 div박스가 숨었다가 
+        체크가 해제되면 div박스가 보이게 만들기
+     -->
+     <input type="checkbox" class="check">
+     <div>
+         <h1>Lorem Ipsum</h1>
+         <p>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+             Non minus accusantium ex? Est tempora ad voluptate incidunt mollitia enim cum nemo. Fuga numquam 
+             magnam obcaecati eveniet adipisci repellat quibusdam rem?
+         </p>
+     </div>
+</body>
+</html>

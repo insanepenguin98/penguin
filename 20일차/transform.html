@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변형속성</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            width: 300px;
+            height: 300px;
+            border: 5px solid black;
+            margin: 150px;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+            transform: rotate(60deg);
+            transform-origin: 100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        2차원 변형에 따른 변형속성
+        ==========================
+        프로그램에서 x축과 y축 좌표가 있는 화면을 2차원 화면 좌표라고 부름.
+        여기에 z축을 추가하면 3차원 변환이되고 z축은 원근 개념 좌표로 웹 브라우저를 보는 사람쪽에
+        가까울수록 양의 값임.
+
+        transform 속성
+        ==================
+        객체(=태그)를 변환하는 속성.
+
+        [2차원 변환 함수]
+        =======================
+        프로그래밍ㅇ 언어에서 식별자(여기에선 속성값)뒤에 괄호가 있을때
+        해당 식별자를 함수라고 부르며,rotate(60deg)의 괄호부분을 변환함수
+        라고 부름.
+        [속성값]
+        1. translate(translateX, translateY) : 특정 크기만큼 이동함
+            - translateX : x축으로 특정 크기만큼 이동
+            - translateY : y축으로 특정 크기만큼 이동
+       
+        2. scale(scaleX, scaleY) : 특정 크기만큼 축소 확대함
+            - scaleX : x축으로 특정 크기만큼 확대/축소
+            - scaleY : y축으로 특정 크기만큼 확대/축소
+        
+        3. skow(angleX, angleY) : 특정 각도만큼 기울임.
+            - skowX : 특정 각도만큼 x축으로 기울임.
+            - skowY : 특정 각도만큼 y축으로 기울임.
+            
+        4. rotate(angleZ) : 특정 각도만큼 회전함
+        
+        transform-origin
+        ===================================
+        변한 중심을 설정하는 속성. 기준점의 기본값은 가운데이며 x,y,z축을
+        이용해 옮길 수 있음.
+        [기본형]
+        transform-origin : x축 y축 z축;
+        - x축 : 백분율, left, center, right중에서 저장 가능
+        - y축 : 백분율, top, center, bottom중에서 저장 가능
+        - z축 : z좌표값으로 길이값만 사용가능함.
+     -->
+     <section>
+         <div></div>
+     </section>
+</body>
+</html>

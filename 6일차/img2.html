@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 태그</title>
+</head>
+<body>
+  <!-- 웹 페이지상에 있는 이미지를 바로 불러오기 
+       ========================================
+       웹사이트에 있는 이미지를 마우스 우클릭하여 주소를 복사해오는 방식
+       실무에서는 사용되는 방식은 아니며 임시로 이미지를 넣어서 확인해보는 용도로
+       보통 사용됨. 잘 사용되지 않는 이유는 작업자의 컴퓨터나 서버에 사진이 존재하는게 아니라
+       웹사이트 서버에서 불러오는 방식이기 때문에 사진의 이름이 바뀌거나 경로나 확장자가 바뀌어도
+       제대로 출력되지 않고 엑박으로 처리 되기 떄문에 사용하지 않습니다.
+  -->
+  <img src="https://images.pexels.com/photos/9085059/pexels-photo-9085059.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="펭귄">
+
+  <!-- 
+    <figure>(블록속성),<figcaption>이미지에 설명글을 넣는 태그
+    ========================================================
+    웹표준이 정의되기 이전에는 이미지에 설명을 넣을때 <p>태그를 사용했음.
+    html5에서는 이미지를 비롯한 표나 멀티미디어요소(오디오, 비디오파일 등)에 설명을 붙일 때
+    <figure>,<figcation>을 사용함  
+      
+   -->
+   <figure>
+     <figcaption>지구온난화가 심해지고 있어요 펭귄이 아파해요</figcaption>
+     <img src="./img/penguin.jpg" alt="penguin">
+     <figcaption>지구온난화가 심해지고 있어요 펭귄이 아파해요</figcaption>
+  </figure>
+</body>
+</html>

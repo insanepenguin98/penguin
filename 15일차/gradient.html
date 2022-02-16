@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그레디언트</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            margin-left: 30px;
+            float: left;
+        }
+        .gr1{
+            /* 선형 그라디언트 */
+            background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+        }
+        .gr2{
+            /* 원형 그라디언트 */
+            background-image: radial-gradient(circle at center, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        그레디언트
+        ===================
+        background-color에 적용할 수 있는 속성.
+        css3이상만 적용되고, 오래된 구 버전 브라우저는 
+        호환이 안되는 경우가 많음. 익스는 특히 호환성이 
+        떨어짐. 이떄 브라우저 접두사를 사용하면
+        이 호환문제를 해결할 수 있음
+        
+        [브라우저 접두사]
+        -webkit- : 크롬, 사파리
+        -moz- : 파이어폭스
+        -o- : 오페라
+        -iE- : 익스플로러
+
+        [선형그레디언트]
+        linear-gradient(각도 to 방향, colorstop, colorstop.....)
+        - 각도의 단위는 deg이며 top부분부터 시계방향으로 360도로 돌아감.
+
+        [원형그레디언트]
+        radial-gradient(최종모양 크기 at 위치, colorstop, colorstop..... )
+        - 최종모양 : elipse(타원형. 기본값), circle(정 원형)
+     -->
+     <div class="gr1"></div>
+     <div class="gr2"></div>
+</body>
+</html>
